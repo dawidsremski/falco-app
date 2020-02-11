@@ -1,0 +1,46 @@
+<header fxLayout="row" fxLayoutAlign="center" [style.minHeight]="height" [style.backgroundPosition]="bgPos"
+        style="position: relative">
+  <div class="header-overlay" fxLayout="row" fxFlex="100%" fxLayoutAlign="start">
+    <div fxLayout="column">
+      <div fxLayout="row" fxLayoutGap="10%">
+        <div fxLayout="column" fxFlex="45%" fxFlex.lt-md="100%">
+          <div fxLayout="row">
+            <h1 class="primary-text"><strong>Falco.</strong> Lider usług leśnych w&nbsp;regionie.</h1>
+          </div>
+          <div fxLayout="row">
+            <p class="secondary-text">Firma ZPHU Falco funkcjonuje na rynku usług leśnych od
+              1997 roku, prowadzi działalność na obszarze całego kraju. Wieloletnie doświadczenie oraz szeroki zakres
+              prac
+              w&nbsp;zmiennych
+              warunkach dla różnych odbiorców, dały podstawy do wypracowania doświadczenia i&nbsp;świadczenia wysokiej
+              jakości usług.</p>
+          </div>
+        </div>
+        <div fxLayout="column" fxFlex="45%" fxHide.lt-md>
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>
+                Nasza kadra
+              </mat-card-title>
+            </mat-card-header>
+            <img class="mat-card-image" src="assets/harvester.jpeg">
+            <mat-card-content>
+              <p>Nasz rozbudowany park maszyn uzupełnia wykwalifikowana kadra pracownicza. Na stałe zatrudniamy m.in. 50
+                operatorów pilarek spalinowych. Chcesz do nas dołączyć? Sprawdź nasze aktualne ogłoszenia o pracę!</p>
+              <button mat-flat-button color="accent" class="mat-flat-button mat-button-base mat-primary" routerLink="/praca">
+                <span class="mat-button-wrapper">Praca</span>
+              </button>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center" fxHide.lt-sm>
+        <div fxLayout="column" fxLayoutAlign="center" style="position: absolute; bottom: 1rem">
+          <i class="material-icons nav-arrow" style="font-size: 6rem;">
+            expand_more
+          </i>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

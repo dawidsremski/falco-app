@@ -1,0 +1,29 @@
+main {
+  overflow: hidden;
+
+  .main-row {
+    padding: 3rem 1.5rem;
+  }
+}
+
+.figure {
+  margin: 0 0 2rem 0;
+
+  figcaption {
+    text-align: center;
+
+    .header {
+      font-size: 1.5rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+article:last-child {
+  .figure {
+    margin: 0;
+  }
+}
