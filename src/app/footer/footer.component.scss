@@ -2,4 +2,15 @@ footer {
   background-color: #afafaf;
   padding: 3rem 1.5rem;
   min-height: 10rem;
+  color: #fff;
+
+  .copyrights {
+    text-align: center;
+    font-size: .75rem;
+
+    a {
+      text-decoration: inherit;
+      color: inherit;
+    }
+  }
 }
