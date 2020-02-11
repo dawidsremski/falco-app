@@ -11,8 +11,9 @@ header {
 
 .header-overlay {
   background-image: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, 0));
-  padding: 5rem 2rem 3rem 2rem;
+  padding: 5rem 2rem 0 2rem;
   color: #fff;
+  max-width: none;
 
   h1 {
     font-weight: normal;
@@ -25,17 +26,21 @@ header {
     margin: 1.5rem 0 0 0;
     font-size: 1.2rem;
   }
+
+  .nav-row {
+    height: 6rem;
+
+    .nav-arrow {
+      -webkit-animation: 1.5s infinite;
+      animation: pulse 1.5s infinite;
+    }
+  }
 }
 
 @media all and (min-width: 600px) {
   .header-overlay {
-    padding: 7rem 4rem 6rem 4rem;
+    padding: 7rem 4rem 0 4rem;
   }
-}
-
-.nav-arrow {
-  -webkit-animation: 1.5s infinite;
-  animation: pulse 1.5s infinite;
 }
 
 @-webkit-keyframes pulse {
@@ -67,3 +72,21 @@ header {
     transform: translate(0, 0);
   }
 }
+
+
+mat-card {
+  height: 100%;
+
+  mat-card-title {
+    margin-left: -16px;
+  }
+
+  .header-card-image {
+    flex-grow: 1;
+    background-image: url("../../../../assets/harvester.jpeg");
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+}
+
+
