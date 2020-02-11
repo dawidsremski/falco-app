@@ -11,7 +11,7 @@ header {
 
 .header-overlay {
   background-image: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, 0));
-  padding: 5rem 2rem 0 2rem;
+  padding: 6rem 2rem 3rem 2rem;
   color: #fff;
   max-width: none;
 
@@ -39,7 +39,7 @@ header {
 
 @media all and (min-width: 600px) {
   .header-overlay {
-    padding: 7rem 4rem 0 4rem;
+    padding: 6rem 4rem 3rem 4rem;
   }
 }
 
@@ -85,7 +85,7 @@ mat-card {
     flex-grow: 1;
     background-image: url("../../../../assets/harvester.jpeg");
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 100% 100%;
   }
 }
 

@@ -26,5 +26,12 @@ html, body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+::selection {
+  background: mat-color($falco-app-primary);
+}
+::-moz-selection {
+  background: mat-color($falco-app-primary);
 }
