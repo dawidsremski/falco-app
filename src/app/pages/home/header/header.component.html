@@ -1,11 +1,11 @@
 <header fxLayout="row" fxLayoutAlign="center" [style.minHeight]="height" [style.backgroundPosition]="bgPos"
         style="position: relative">
   <div class="header-overlay" fxLayout="row" fxFlex="100%" fxLayoutAlign="start">
-    <div fxLayout="column">
-      <div fxLayout="row" fxLayoutAlign="space-between" style="flex-grow: 1">
-        <div fxLayout="column" fxFlex="47.5%" fxFlex.lt-md="100%">
+    <div fxLayout="column" fxLayoutAlign="space-between">
+      <div fxLayout="row">
+        <div fxLayout="column" fxFlex="60%" fxFlex.lt-lg="100%">
           <div fxLayout="row">
-            <h1 class="primary-text"><strong>Falco.</strong> Lider usług leśnych w&nbsp;regionie.</h1>
+            <h1 class="logo">falco</h1>
           </div>
           <div fxLayout="row">
             <p class="secondary-text">Firma ZPHU Falco funkcjonuje na rynku usług leśnych od
@@ -15,49 +15,15 @@
               warunkach dla różnych odbiorców, dały podstawy do wypracowania doświadczenia i&nbsp;świadczenia wysokiej
               jakości usług.</p>
           </div>
-          <mat-card fxLayout="column" fxLayoutAlign="space-between"
-                    style="margin-top: 2rem; background-color: transparent; border: 1px solid white; color: white;">
-            <article>
-              <mat-card-header>
-                <mat-card-title>
-                  Lorem ipsum
-                </mat-card-title>
-              </mat-card-header>
-              <mat-card-content>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                  officia deserunt mollit anim id est laborum.</p>
-              </mat-card-content>
-            </article>
-            <mat-card-content>
-              <nav class="nav-row" fxLayout="row" fxLayoutAlign="center center">
-                <i class="material-icons nav-arrow" style="font-size: 6rem;">
-                  expand_more
-                </i>
-              </nav>
-            </mat-card-content>
-          </mat-card>
         </div>
-        <div fxLayout="column" fxFlex="47.5%" fxHide.lt-md>
-          <mat-card fxLayout="column">
-            <mat-card-header>
-              <mat-card-title>
-                Lorem ipsum
-              </mat-card-title>
-            </mat-card-header>
-            <figure class="mat-card-image header-card-image"></figure>
-            <mat-card-content>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.</p>
-              <button mat-flat-button color="accent" class="mat-flat-button mat-button-base mat-accent"
-                      routerLink="/praca">
-                <span class="mat-button-wrapper">Przycisk</span>
-              </button>
-            </mat-card-content>
-          </mat-card>
+      </div>
+      <div fxLayout="row">
+        <div fxLayout="column" fxFlexAlign="center" fxFlexFill>
+          <nav class="nav-row" fxLayout="row" fxLayoutAlign="center center">
+            <i class="material-icons nav-arrow" style="font-size: 6rem;">
+              expand_more
+            </i>
+          </nav>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar role="heading" color="black">
+    <mat-toolbar role="heading" [style.backgroundColor]="toolbarColor">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -18,7 +18,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <a mat-button routerLink="/">Falco</a>
+      <a mat-button routerLink="/" class="logo">falco</a>
       <mat-nav-list class="top-bar" *ngIf="!(isHandset$ | async)">
         <a mat-button *ngFor="let item of menuItems"
           routerLink="{{item.link}}"
