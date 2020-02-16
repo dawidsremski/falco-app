@@ -13,21 +13,40 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFC9h0XBTsS4xsYJA4dy05YeiK9OqA80Q" async defer></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <script>
+
+  //Fixes flexbox height issue in counter on iOS devices
+  const fixCounter = function () {
+
+    const counter = $('#counter');
+
+    if (counter.css('flex-direction') === 'column') {
+      counter.attr('style', '');
+    }
+  };
+
+  $(document).ready(function () {
+    fixCounter();
+  });
+
+  $(window).resize(function () {
+    fixCounter();
+  });
+
   function dt_counterFlip() {
 
-    var oTop = $('#counter').offset().top - window.innerHeight;
-    $(window).bind('scroll', function() {
-      var pTop = $(this).scrollTop();
+    const oTop = $('#counter').offset().top - window.innerHeight;
+    $(window).bind('scroll', function () {
+      const pTop = $(this).scrollTop();
 
       if (pTop > oTop) {
         $(window).unbind('scroll');
-        $('.count', '#counter').each(function() {
+        $('.count', '#counter').each(function () {
           $(this).prop('Counter', 0).animate({
             Counter: $(this).text()
           }, {
             duration: 4000,
             easing: 'swing',
-            step: function(now) {
+            step: function (now) {
               $(this).text(Math.ceil(now));
             }
           });
@@ -37,9 +56,10 @@
 
 
   }
-  $(document).ready(function() {
+
+  $(document).ready(function () {
     dt_counterFlip();
   });
 </script>
-<script src="runtime-es2015.c5fa8325f89fc516600b.js" type="module"></script><script src="runtime-es5.c5fa8325f89fc516600b.js" nomodule defer></script><script src="polyfills-es5.3e8196928d184a6e5319.js" nomodule defer></script><script src="polyfills-es2015.5b10b8fd823b6392f1fd.js" type="module"></script><script src="scripts.9b1207587ef3aa866146.js" defer></script><script src="main-es2015.e3ebb230b309c3f3e0b8.js" type="module"></script><script src="main-es5.e3ebb230b309c3f3e0b8.js" nomodule defer></script></body>
+<script src="runtime-es2015.c5fa8325f89fc516600b.js" type="module"></script><script src="runtime-es5.c5fa8325f89fc516600b.js" nomodule defer></script><script src="polyfills-es5.3e8196928d184a6e5319.js" nomodule defer></script><script src="polyfills-es2015.5b10b8fd823b6392f1fd.js" type="module"></script><script src="scripts.9b1207587ef3aa866146.js" defer></script><script src="main-es2015.a3a7bd48c3d5b416bca5.js" type="module"></script><script src="main-es5.a3a7bd48c3d5b416bca5.js" nomodule defer></script></body>
 </html>
