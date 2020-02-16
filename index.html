@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name='viewport' content='initial-scale=1, viewport-fit=cover'>
   <title>Falco</title>
-  <base href="/falco-app/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/falco-app/">  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto|Josefin+Sans&display=swap"
         rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,5 +11,35 @@
 <body>
 <app-root></app-root>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFC9h0XBTsS4xsYJA4dy05YeiK9OqA80Q" async defer></script>
-<script src="runtime-es2015.c5fa8325f89fc516600b.js" type="module"></script><script src="runtime-es5.c5fa8325f89fc516600b.js" nomodule defer></script><script src="polyfills-es5.3e8196928d184a6e5319.js" nomodule defer></script><script src="polyfills-es2015.5b10b8fd823b6392f1fd.js" type="module"></script><script src="scripts.9b1207587ef3aa866146.js" defer></script><script src="main-es2015.9ee2cf4a78c6bf496069.js" type="module"></script><script src="main-es5.9ee2cf4a78c6bf496069.js" nomodule defer></script></body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script>
+  function dt_counterFlip() {
+
+    var oTop = $('#counter').offset().top - window.innerHeight;
+    $(window).bind('scroll', function() {
+      var pTop = $(this).scrollTop();
+
+      if (pTop > oTop) {
+        $(window).unbind('scroll');
+        $('.count', '#counter').each(function() {
+          $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+          }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function(now) {
+              $(this).text(Math.ceil(now));
+            }
+          });
+        });
+      }
+    });
+
+
+  }
+  $(document).ready(function() {
+    dt_counterFlip();
+  });
+</script>
+<script src="runtime-es2015.c5fa8325f89fc516600b.js" type="module"></script><script src="runtime-es5.c5fa8325f89fc516600b.js" nomodule defer></script><script src="polyfills-es5.3e8196928d184a6e5319.js" nomodule defer></script><script src="polyfills-es2015.5b10b8fd823b6392f1fd.js" type="module"></script><script src="scripts.9b1207587ef3aa866146.js" defer></script><script src="main-es2015.bec7fecabcb4bde006d3.js" type="module"></script><script src="main-es5.bec7fecabcb4bde006d3.js" nomodule defer></script></body>
 </html>
