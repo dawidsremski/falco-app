@@ -35,3 +35,11 @@ body {
 ::-moz-selection {
   background: mat-color($falco-app-primary);
 }
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

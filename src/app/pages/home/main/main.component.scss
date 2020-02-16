@@ -1,9 +1,5 @@
 main {
   overflow: hidden;
-
-  .main-row {
-    padding: 3rem 1.5rem;
-  }
 }
 
 .figure {
@@ -33,9 +29,57 @@ mat-card-title {
 }
 
 .outlined-white {
-  background: rgba(0,0,0,.05);
+  background: rgba(0, 0, 0, .05);
   border: 1px solid #fff;
   color: #fff
 }
 
+#icons-2 {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-image: url("../../../../assets/pile_of_woods_bg.jpeg");
+  color: #fff;
 
+  .content {
+    padding: 10rem 1.5rem;
+    background-color: rgba(0, 0, 0, .2);
+
+    p {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
+
+#icons-1, #counter-section {
+  padding: 7rem 1.5rem;
+}
+
+#cards {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-image: url("../../../../assets/header-bg6.jpeg");
+
+  .content {
+    padding: 3rem 3rem;
+    background-color: rgba(225, 225, 225, .9);
+  }
+}
+
+@media all and (max-width: 600px) {
+  @supports (-webkit-overflow-scrolling: touch) {
+    #icons-2, #cards {
+      background-attachment: scroll;
+    }
+  }
+
+  #counter-section, #cards .content {
+    padding: 3rem 1.5rem;
+  }
+}

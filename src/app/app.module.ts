@@ -18,6 +18,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MissingPageComponent} from './pages/missing-page/missing-page.component';
 import {MapComponent} from './map/map.component';
 import {FooterComponent} from './footer/footer.component';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {FooterComponent} from './footer/footer.component';
     HomeComponent,
     MainComponent,
     MissingPageComponent,
-    FooterComponent
+    FooterComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,

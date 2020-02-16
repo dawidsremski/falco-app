@@ -29,6 +29,10 @@ export class NavigationComponent {
       link: '/praca'
     },
     {
+      title: 'Zapytania ofertowe',
+      link: '/zapytania-ofertowe'
+    },
+    {
       title: 'Kontakt',
       link: '/kontakt'
     },
