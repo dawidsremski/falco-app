@@ -1,0 +1,47 @@
+:host {
+  width: 100%;
+}
+
+.single-counter-container {
+  border-radius: 50%;
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  background-color: #fff;
+  text-align: center;
+}
+
+.single-counter-content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media all and (min-width: 600px) {
+
+  .count {
+    font-size: 5vw;
+  }
+
+  .description {
+    font-size: 1vw;
+    padding: 0 2vw;
+  }
+}
+
+@media all and (max-width: 600px) {
+
+  .count {
+    font-size: 25vw;
+  }
+
+  .description {
+    font-size: 5vw;
+    padding: 0 10vw;
+  }
+}
