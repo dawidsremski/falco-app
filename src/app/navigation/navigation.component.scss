@@ -11,12 +11,23 @@
   height: 3rem;
   position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 2;
   color: #fff;
+
+  .mat-list-base {
+    padding-top: 0;
+  }
 }
 
-mat-nav-list {
-  padding: 0;
+mat-sidenav {
+  mat-nav-list {
+    margin-top: 3rem;
+    padding: 0;
+  }
+
+  mat-toolbar {
+    background-color: #000;
+  }
 }
 
 .mat-button {

@@ -25,14 +25,6 @@
     }
   };
 
-  $(document).ready(function () {
-    fixCounter();
-  });
-
-  $(window).resize(function () {
-    fixCounter();
-  });
-
   function dt_counterFlip() {
 
     const oTop = $('#counter').offset().top - window.innerHeight;
@@ -54,12 +46,15 @@
         });
       }
     });
-
-
   }
 
   $(document).ready(function () {
+    fixCounter();
     dt_counterFlip();
+  });
+
+  $(window).resize(function () {
+    fixCounter();
   });
 </script>
 </body>

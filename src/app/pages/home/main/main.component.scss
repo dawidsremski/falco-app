@@ -34,6 +34,18 @@ mat-card-title {
   color: #fff
 }
 
+#icons-1 {
+  img {
+    width: 125px;
+  }
+
+  @media all and (max-width: 600px) {
+    img {
+      width: 33.3vw;
+    }
+  }
+}
+
 #icons-2 {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -41,17 +53,23 @@ mat-card-title {
   background-size: cover;
   background-attachment: fixed;
   background-position: 50% 100%;
-  background-image: url("../../../../assets/pile_of_woods_bg.jpeg");
+  background-image: url("../../../../assets/pile_of_woods_bg_2560.jpeg");
   color: #fff;
 
   .content {
     padding: 10rem 1.5rem;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .3);
 
     p {
       font-size: 2rem;
       text-align: center;
       font-weight: bold;
+    }
+
+    @media all and (max-width: 600px) {
+      p {
+        font-size: 1.5rem;
+      }
     }
   }
 }
@@ -73,13 +91,17 @@ mat-card-title {
 }
 
 @media all and (max-width: 600px) {
-  @supports (-webkit-overflow-scrolling: touch) {
-    #icons-2, #cards {
-      background-attachment: scroll;
-    }
+  #cards .content {
+    padding: 3rem 1.5rem;
   }
 
-  #counter-section, #cards .content {
-    padding: 3rem 1.5rem;
+  #counter-section {
+    padding: 3rem 3rem;
+  }
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  #icons-2, #cards {
+    background-attachment: scroll;
   }
 }
