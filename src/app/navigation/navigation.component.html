@@ -9,7 +9,10 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar role="heading" [style.backgroundColor]="toolbarColor">
+    <header class="top-header" fxLayout="row">
+      <img src="assets/logo_corrected.svg">
+    </header>
+    <mat-toolbar role="heading">
       <button
         type="button"
         aria-label="Toggle sidenav"

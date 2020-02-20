@@ -9,7 +9,7 @@
 
 .mat-toolbar {
   height: 3rem;
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 2;
   color: #fff;
@@ -24,19 +24,30 @@ mat-sidenav {
     margin-top: 3rem;
     padding: 0;
   }
+}
 
-  mat-toolbar {
-    background-color: #000;
-  }
+.mat-toolbar {
+  background-color: #fff;
+  color: #006649;
 }
 
 .mat-button {
+  box-sizing: border-box;
   border-radius: 0;
   padding: 0 20px;
   line-height: 48px;
 
   &.active {
-    border-bottom: 4px solid #fff;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: 4px solid #006649;
+      content: "";
+    }
   }
 }
 
@@ -44,9 +55,7 @@ mat-sidenav {
   min-width: 50%;
 }
 
-.logo {
-  font-weight: normal;
-  font-family: 'Josefin Sans', sans-serif;
-  letter-spacing: -.04em;
-  font-size: 1.2rem;
+.top-header {
+  padding: 1.5rem 3rem;
+  min-height: 7rem;
 }
