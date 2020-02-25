@@ -20,7 +20,43 @@
 
 <script>
 
+  //Fixes jumping background when scrolling on IE
+  //
+  var body = $('body');
+
+  if(navigator.userAgent.match(/Trident\/7\./)) {
+
+    body.on("mousewheel", function () {
+      event.preventDefault();
+
+      var wheelDelta = event.wheelDelta;
+
+      var currentScrollPosition = window.pageYOffset;
+      window.scrollTo(0, currentScrollPosition - wheelDelta);
+    });
+
+    body.keydown(function (e) {
+      e.preventDefault();
+      var currentScrollPosition = window.pageYOffset;
+
+      switch (e.which) {
+
+        case 38: // up
+          window.scrollTo(0, currentScrollPosition - 120);
+          break;
+
+        case 40: // down
+          window.scrollTo(0, currentScrollPosition + 120);
+          break;
+
+        default: return;
+      }
+    });
+  }
+
+  //End of fix
   //Fixes flexbox height issue in counter on iOS devices
+
   const fixCounter = function () {
 
     const counter = $('#counter');
@@ -29,6 +65,8 @@
       counter.attr('style', '');
     }
   };
+
+  //End of fix
 
   function dt_counterFlip() {
 
@@ -62,5 +100,5 @@
     fixCounter();
   });
 </script>
-<script src="runtime-es2015.c5fa8325f89fc516600b.js" type="module"></script><script src="runtime-es5.c5fa8325f89fc516600b.js" nomodule defer></script><script src="polyfills-es5.3e8196928d184a6e5319.js" nomodule defer></script><script src="polyfills-es2015.5b10b8fd823b6392f1fd.js" type="module"></script><script src="scripts.9b1207587ef3aa866146.js" defer></script><script src="main-es2015.b0cef758e4357595fb85.js" type="module"></script><script src="main-es5.b0cef758e4357595fb85.js" nomodule defer></script></body>
+<script src="runtime-es2015.c5fa8325f89fc516600b.js" type="module"></script><script src="runtime-es5.c5fa8325f89fc516600b.js" nomodule defer></script><script src="polyfills-es5.3e8196928d184a6e5319.js" nomodule defer></script><script src="polyfills-es2015.5b10b8fd823b6392f1fd.js" type="module"></script><script src="scripts.9b1207587ef3aa866146.js" defer></script><script src="main-es2015.afa65fca32e74bdeff73.js" type="module"></script><script src="main-es5.afa65fca32e74bdeff73.js" nomodule defer></script></body>
 </html>
