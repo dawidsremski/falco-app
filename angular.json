@@ -64,6 +64,9 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "es5": {
+              "tsConfig": "./tsconfig.es5.json"
             }
           }
         },
@@ -75,6 +78,9 @@
           "configurations": {
             "production": {
               "browserTarget": "falco-app:build:production"
+            },
+            "es5": {
+              "browserTarget": "falco-app:build:es5"
             }
           }
         },

@@ -16,7 +16,6 @@ import {FlexLayoutModule, FlexModule, GridModule} from '@angular/flex-layout';
 import {MainComponent} from './pages/home/main/main.component';
 import {MatCardModule} from '@angular/material/card';
 import {MissingPageComponent} from './pages/missing-page/missing-page.component';
-import {MapComponent} from './map/map.component';
 import {FooterComponent} from './footer/footer.component';
 import { CounterComponent } from './counter/counter.component';
 
@@ -24,7 +23,6 @@ import { CounterComponent } from './counter/counter.component';
   declarations: [
     AppComponent,
     NavigationComponent,
-    MapComponent,
     HeaderComponent,
     HomeComponent,
     MainComponent,
