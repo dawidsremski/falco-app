@@ -3,28 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover'>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <title>Falco</title>
-  <base href="/falco-app/">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto|Josefin+Sans&display=swap"
+  <base href="/falco-app/">  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto|Josefin+Sans&display=swap"
         rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="styles.1e3c2be8023c9ee12e08.css"></head>
+<link rel="stylesheet" href="styles.07354a3d653ebfe705ec.css"></head>
 <body>
 <app-root></app-root>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFC9h0XBTsS4xsYJA4dy05YeiK9OqA80Q" async defer></script>
 <script
   src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
   integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
   crossorigin="anonymous"></script>
-
 <script>
 
   //Fixes jumping background when scrolling on IE
   //
   var body = $('body');
 
-  if(navigator.userAgent.match(/Trident\/7\./)) {
+  if (navigator.userAgent.match(/Trident\/7\./)) {
 
     body.on("mousewheel", function () {
       event.preventDefault();
@@ -49,7 +46,8 @@
           window.scrollTo(0, currentScrollPosition + 120);
           break;
 
-        default: return;
+        default:
+          return;
       }
     });
   }
@@ -100,5 +98,5 @@
     fixCounter();
   });
 </script>
-<script src="runtime-es2015.c5fa8325f89fc516600b.js" type="module"></script><script src="runtime-es5.c5fa8325f89fc516600b.js" nomodule defer></script><script src="polyfills-es5.3e8196928d184a6e5319.js" nomodule defer></script><script src="polyfills-es2015.5b10b8fd823b6392f1fd.js" type="module"></script><script src="scripts.9b1207587ef3aa866146.js" defer></script><script src="main-es2015.bd8d1edc0d3115eb794a.js" type="module"></script><script src="main-es5.bd8d1edc0d3115eb794a.js" nomodule defer></script></body>
+<script src="runtime-es2015.c5fa8325f89fc516600b.js" type="module"></script><script src="runtime-es5.c5fa8325f89fc516600b.js" nomodule defer></script><script src="polyfills-es5.3e8196928d184a6e5319.js" nomodule defer></script><script src="polyfills-es2015.5b10b8fd823b6392f1fd.js" type="module"></script><script src="scripts.9b1207587ef3aa866146.js" defer></script><script src="main-es2015.d2a876f45c3412add13f.js" type="module"></script><script src="main-es5.d2a876f45c3412add13f.js" nomodule defer></script></body>
 </html>
