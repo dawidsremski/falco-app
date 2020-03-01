@@ -12,13 +12,11 @@
 <body>
 <app-root></app-root>
 <script
-  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
-  crossorigin="anonymous"></script>
+  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
 
   //Fixes jumping background when scrolling on IE
-  //
+
   var body = $('body');
 
   if (navigator.userAgent.match(/Trident\/7\./)) {
@@ -67,36 +65,43 @@
   //End of fix
 
   function dt_counterFlip() {
-
-    const oTop = $('#counter').offset().top - window.innerHeight;
-    $(window).bind('scroll', function () {
-      const pTop = $(this).scrollTop();
-
-      if (pTop > oTop) {
-        $(window).unbind('scroll');
-        $('.count', '#counter').each(function () {
-          $(this).prop('Counter', 0).animate({
-            Counter: $(this).text()
-          }, {
-            duration: 4000,
-            easing: 'swing',
-            step: function (now) {
-              $(this).text(Math.ceil(now));
-            }
-          });
+    var isCounting = false;
+    $(window).scroll(function () {
+      var oTop = $('#counter').offset().top - window.innerHeight;
+      if (isCounting === false && $(window).scrollTop() > oTop) {
+        $('.count').each(function () {
+          var $this = $(this),
+            countTo = $this.attr('data-count');
+          $({
+            countNum: $this.text()
+          }).animate({
+              countNum: countTo
+            },
+            {
+              duration: 2000,
+              easing: 'swing',
+              step: function () {
+                $this.text(Math.floor(this.countNum));
+              },
+              complete: function () {
+                $this.text(this.countNum);
+              }
+            });
         });
+        isCounting = true;
       }
     });
   }
 
   $(document).ready(function () {
     fixCounter();
-    //dt_counterFlip();
+    dt_counterFlip();
   });
 
   $(window).resize(function () {
     fixCounter();
   });
+
 </script>
-<script src="runtime-es2015.c5fa8325f89fc516600b.js" type="module"></script><script src="runtime-es5.c5fa8325f89fc516600b.js" nomodule defer></script><script src="polyfills-es5.3e8196928d184a6e5319.js" nomodule defer></script><script src="polyfills-es2015.5b10b8fd823b6392f1fd.js" type="module"></script><script src="scripts.9b1207587ef3aa866146.js" defer></script><script src="main-es2015.70b8526df2d6ca915f29.js" type="module"></script><script src="main-es5.70b8526df2d6ca915f29.js" nomodule defer></script></body>
+<script src="runtime-es2015.c5fa8325f89fc516600b.js" type="module"></script><script src="runtime-es5.c5fa8325f89fc516600b.js" nomodule defer></script><script src="polyfills-es5.3e8196928d184a6e5319.js" nomodule defer></script><script src="polyfills-es2015.5b10b8fd823b6392f1fd.js" type="module"></script><script src="scripts.9b1207587ef3aa866146.js" defer></script><script src="main-es2015.af60e85e069d81b7e5d8.js" type="module"></script><script src="main-es5.af60e85e069d81b7e5d8.js" nomodule defer></script></body>
 </html>
