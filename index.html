@@ -65,15 +65,15 @@
   //End of fix
 
   function dt_counterFlip() {
-    var isCounting = false;
+    var triggered = false;
     $(window).scroll(function () {
       var oTop = $('#counter').offset().top - window.innerHeight;
-      if (isCounting === false && $(window).scrollTop() > oTop) {
+      if (triggered === false && $(window).scrollTop() > oTop) {
         $('.count').each(function () {
           var $this = $(this),
             countTo = $this.attr('data-count');
           $({
-            countNum: $this.text()
+            countNum: 0
           }).animate({
               countNum: countTo
             },
@@ -88,7 +88,7 @@
               }
             });
         });
-        isCounting = true;
+        triggered = true;
       }
     });
   }
@@ -103,5 +103,5 @@
   });
 
 </script>
-<script src="runtime-es2015.c5fa8325f89fc516600b.js" type="module"></script><script src="runtime-es5.c5fa8325f89fc516600b.js" nomodule defer></script><script src="polyfills-es5.3e8196928d184a6e5319.js" nomodule defer></script><script src="polyfills-es2015.5b10b8fd823b6392f1fd.js" type="module"></script><script src="scripts.9b1207587ef3aa866146.js" defer></script><script src="main-es2015.af60e85e069d81b7e5d8.js" type="module"></script><script src="main-es5.af60e85e069d81b7e5d8.js" nomodule defer></script></body>
+<script src="runtime-es2015.c5fa8325f89fc516600b.js" type="module"></script><script src="runtime-es5.c5fa8325f89fc516600b.js" nomodule defer></script><script src="polyfills-es5.3e8196928d184a6e5319.js" nomodule defer></script><script src="polyfills-es2015.5b10b8fd823b6392f1fd.js" type="module"></script><script src="scripts.9b1207587ef3aa866146.js" defer></script><script src="main-es2015.f86c51bc7d1fb7a41f87.js" type="module"></script><script src="main-es5.f86c51bc7d1fb7a41f87.js" nomodule defer></script></body>
 </html>
