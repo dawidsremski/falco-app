@@ -37,6 +37,7 @@ mat-card-title {
 }
 
 #icons-1 {
+
   img {
     width: 100px;
   }
@@ -47,8 +48,26 @@ mat-card-title {
     }
   }
 
+  h2 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    position: relative;
+    margin-bottom: 2rem;
+
+    &:after {
+      width: 50px;
+      height: 3px;
+      background-color: #006649;
+      content: "";
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+    }
+  }
+
   p {
-    font-size: .9rem;
+    font-size: .75rem;
   }
 }
 
@@ -72,6 +91,25 @@ mat-card-title {
       font-weight: 400;
       font-family: "Montserrat", sans-serif;
       line-height: 1.5;
+      position: relative;
+
+      &:before, &:after {
+        position: absolute;
+        font-family: "Material Icons";
+        content: "format_quote";
+        font-size: 26rem;
+        color: rgba(255,255,255,.3)
+      }
+
+      &:before {
+        top: -18rem;
+        left: -8rem;
+      }
+
+      &:after {
+        bottom: -18rem;
+        right: -8rem;
+      }
     }
 
     @media all and (max-width: 600px) {
