@@ -17,7 +17,12 @@ import {MainComponent} from './pages/home/main/main.component';
 import {MatCardModule} from '@angular/material/card';
 import {MissingPageComponent} from './pages/missing-page/missing-page.component';
 import {FooterComponent} from './footer/footer.component';
-import { CounterComponent } from './counter/counter.component';
+import {CounterComponent} from './counter/counter.component';
+import {AgmCoreModule} from '@agm/core';
+import {CookieSnackbarComponent} from './cookie-snackbar/cookie-snackbar.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {CookieService} from 'ngx-cookie-service';
+import { SectionHeaderComponent } from './common/section-header/section-header.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,9 @@ import { CounterComponent } from './counter/counter.component';
     MainComponent,
     MissingPageComponent,
     FooterComponent,
-    CounterComponent
+    CounterComponent,
+    CookieSnackbarComponent,
+    SectionHeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -42,9 +49,16 @@ import { CounterComponent } from './counter/counter.component';
     FlexModule,
     GridModule,
     MatCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatSnackBarModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAFC9h0XBTsS4xsYJA4dy05YeiK9OqA80Q'
+    })
   ],
-  providers: [],
+  entryComponents: [
+    CookieSnackbarComponent
+  ],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

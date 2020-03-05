@@ -38,13 +38,17 @@ mat-card-title {
 
 #icons-1 {
   img {
-    width: 125px;
+    width: 100px;
   }
 
   @media all and (max-width: 600px) {
     img {
       width: 33.3vw;
     }
+  }
+
+  p {
+    font-size: .9rem;
   }
 }
 
@@ -55,17 +59,19 @@ mat-card-title {
   background-size: cover;
   background-attachment: fixed;
   background-position: 50% 100%;
-  background-image: url("../../../../assets/pile_of_woods_bg_2560.jpeg");
+  background-image: url("../../../../assets/forwarder_bg.jpeg");
   color: #fff;
 
   .content {
-    padding: 10rem 1.5rem;
+    padding: 8rem 1.5rem;
     background-color: rgba(0, 0, 0, .3);
 
     p {
       font-size: 2rem;
       text-align: center;
-      font-weight: bold;
+      font-weight: 400;
+      font-family: "Montserrat", sans-serif;
+      line-height: 1.5;
     }
 
     @media all and (max-width: 600px) {
@@ -83,11 +89,6 @@ mat-card-title {
 #partners {
   padding: 5rem 1.5rem;
   background-color: #fff;
-
-  h2 {
-    margin-top: 0;
-    margin-bottom: 2rem;
-  }
 }
 
 #cards {
@@ -98,7 +99,7 @@ mat-card-title {
 
   .content {
     padding: 3rem 3rem;
-    background-color: rgba(225, 225, 225, .4);
+    background-color: rgba(225, 225, 225, .8);
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 2rem 1fr 2rem 1fr;
@@ -222,11 +223,6 @@ mat-card-title {
       }
     }
   }
-
-  //.mat-card-image {
-  //  max-height: 10rem;
-  //  width: auto;
-  //}
 }
 
 @media all and (max-width: 600px) {
@@ -243,4 +239,8 @@ mat-card-title {
   #icons-2, #cards {
     background-attachment: scroll;
   }
+}
+
+agm-map {
+  height: 600px;
 }

@@ -1,4 +1,4 @@
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container class="sidenav-container" [ngClass]="isCookieDialogOpened ? 'blur' : ''">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
@@ -9,8 +9,16 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <header class="top-header" fxLayout="row">
+    <header class="top-header" fxLayout="row" fxLayoutAlign="space-between">
       <img src="assets/logo_corrected.svg">
+      <address fxLayout="column" fxLayoutAlign="center">
+        <h2>Kontakt</h2>
+        <mat-divider></mat-divider>
+        <p><span class="material-icons">phone</span>(+48) 89 621 33 18</p>
+        <p>
+          <span class="material-icons">mail_outline</span><a href="mailto: biuro@falcojedwabno.pl">biuro@falcojedwabno.pl</a>
+        </p>
+      </address>
     </header>
     <mat-toolbar role="heading">
       <button

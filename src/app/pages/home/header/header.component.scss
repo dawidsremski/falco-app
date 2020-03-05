@@ -4,9 +4,8 @@ header {
   overflow: hidden;
   position: absolute;
   top: 0;
-  background-image: url("../../../../assets/forwarder_bg_2560.jpeg");
-  background-position: 50% 100%;
-  background-attachment: fixed;
+  background-image: url("../../../../assets/AdobeStock_280018781.jpeg");
+  background-position: 100% 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -23,25 +22,34 @@ header {
   overflow: hidden;
 
   h1 {
-    font-size: 6rem;
+    font-size: 2.5rem;
     margin: 0;
+    line-height: 1;
   }
 
-  .logo {
-    font-weight: normal;
-    font-family: 'Josefin Sans', sans-serif;
-    letter-spacing: -.05em;
+  .primary-text {
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -.02em;
   }
 
   .secondary-text {
-    margin: 1rem 0 0 0;
+    margin: 1.5rem 0 0 0;
     font-size: 1.25rem;
+    line-height: 1.5;
+    font-weight: 200;
+    font-family: 'Montserrat', sans-serif;
   }
 
   @media all and (max-width: 600px) {
     .secondary-text {
       font-size: 1.25rem;
     }
+  }
+
+  button {
+    width: fit-content;
+    margin-top: 1.5rem;
   }
 
   .nav-row {
@@ -59,24 +67,13 @@ header {
   position: relative;
 }
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 960px) {
   .header-overlay {
     padding: 5rem 8rem 3rem 8rem;
   }
 }
 
 @media all and (min-width: 960px) {
-  .header-overlay:before {
-    z-index: -1;
-    position: absolute;
-    bottom: 0;
-    right: 45%;
-    width: 100%;
-    height: 150%;
-    content: "";
-    background-color: rgba(200, 200, 200, 1);
-  }
-
   .header-overlay:after {
     z-index: -1;
     position: absolute;
@@ -85,29 +82,28 @@ header {
     width: 150%;
     height: 150%;
     content: "";
-    transform: rotate(9deg);
+    transform: translateY(calc(55vw * 0.15838)) rotate(9deg);
     transform-origin: 100% 100%;
-    background-color: #006649;
+    background-color: rgba(0, 64, 46, 0.82);
   }
 
-  header:after {
-    z-index: -0;
-    position: absolute;
-    bottom: 0;
-    right: 37.5%;
-    width: 150%;
-    height: 150%;
-    content: "";
-    transform: rotate(-11deg);
-    transform-origin: 100% 100%;
-    background-color: rgba(255,255,255,.5);
-  }
+  //header:after {
+  //  z-index: -0;
+  //  position: absolute;
+  //  bottom: 0;
+  //  right: 37.5%;
+  //  width: 150%;
+  //  height: 150%;
+  //  content: "";
+  //  transform: rotate(-11deg);
+  //  transform-origin: 100% 100%;
+  //  background-color: rgba(255,255,255,.5);
+  //}
 }
 
-@media all and (max-width: 960px) {
-  header {
-    background-image: none;
-    background-color: #006649;
+@media all and (max-width: 959px) {
+  .header-overlay {
+    background-color: rgba(0, 64, 46, 0.82);
   }
 }
 

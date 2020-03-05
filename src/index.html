@@ -3,28 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover'>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <title>Falco</title>
   <base href="/">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto|Josefin+Sans&display=swap"
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500|Open+Sans|Roboto|Josefin+Sans&display=swap&subset=latin-ext"
         rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 <app-root></app-root>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFC9h0XBTsS4xsYJA4dy05YeiK9OqA80Q" async defer></script>
 <script
-  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
-  crossorigin="anonymous"></script>
-
+  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
 
   //Fixes jumping background when scrolling on IE
-  //
+
   var body = $('body');
 
-  if(navigator.userAgent.match(/Trident\/7\./)) {
+  if (navigator.userAgent.match(/Trident\/7\./)) {
 
     body.on("mousewheel", function () {
       event.preventDefault();
@@ -49,7 +45,8 @@
           window.scrollTo(0, currentScrollPosition + 120);
           break;
 
-        default: return;
+        default:
+          return;
       }
     });
   }
@@ -69,36 +66,43 @@
   //End of fix
 
   function dt_counterFlip() {
-
-    const oTop = $('#counter').offset().top - window.innerHeight;
-    $(window).bind('scroll', function () {
-      const pTop = $(this).scrollTop();
-
-      if (pTop > oTop) {
-        $(window).unbind('scroll');
-        $('.count', '#counter').each(function () {
-          $(this).prop('Counter', 0).animate({
-            Counter: $(this).text()
-          }, {
-            duration: 4000,
-            easing: 'swing',
-            step: function (now) {
-              $(this).text(Math.ceil(now));
-            }
-          });
+    var triggered = false;
+    $(window).scroll(function () {
+      var oTop = $('#counter').offset().top - window.innerHeight;
+      if (triggered === false && $(window).scrollTop() > oTop) {
+        $('.count').each(function () {
+          var $this = $(this),
+            countTo = $this.attr('data-count');
+          $({
+            countNum: 0
+          }).animate({
+              countNum: countTo
+            },
+            {
+              duration: 2000,
+              easing: 'swing',
+              step: function () {
+                $this.text(Math.floor(this.countNum));
+              },
+              complete: function () {
+                $this.text(this.countNum);
+              }
+            });
         });
+        triggered = true;
       }
     });
   }
 
   $(document).ready(function () {
     fixCounter();
-    //dt_counterFlip();
+    dt_counterFlip();
   });
 
   $(window).resize(function () {
     fixCounter();
   });
+
 </script>
 </body>
 </html>

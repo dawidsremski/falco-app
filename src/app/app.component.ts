@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'falco-app';
+  menuItems = [
+    {
+      title: 'Strona główna',
+      link: '/'
+    },
+    {
+      title: 'Praca',
+      link: ''
+    },
+    {
+      title: 'Zapytania ofertowe',
+      link: ''
+    },
+    {
+      title: 'Kontakt',
+      link: ''
+    },
+  ];
 }
