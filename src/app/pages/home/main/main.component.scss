@@ -36,6 +36,10 @@ mat-card-title {
   color: #fff
 }
 
+app-section-header {
+  margin-bottom: 5rem;
+}
+
 #icons-1 {
 
   img {
@@ -50,24 +54,26 @@ mat-card-title {
 
   h2 {
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.1rem;
     position: relative;
-    margin-bottom: 2rem;
+    margin: 1.5rem 0 1rem 0;
+    font-weight: 400;
 
-    &:after {
-      width: 50px;
-      height: 3px;
-      background-color: #006649;
-      content: "";
-      bottom: -1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      position: absolute;
-    }
+    //&:after {
+    //  width: 50px;
+    //  height: 3px;
+    //  background-color: #006649;
+    //  content: "";
+    //  bottom: -1rem;
+    //  left: 50%;
+    //  transform: translateX(-50%);
+    //  position: absolute;
+    //}
   }
 
   p {
-    font-size: .75rem;
+    font-size: .9rem;
+    line-height: 1.5;
   }
 }
 
@@ -88,7 +94,7 @@ mat-card-title {
     p {
       font-size: 2rem;
       text-align: center;
-      font-weight: 400;
+      font-weight: 200;
       font-family: "Montserrat", sans-serif;
       line-height: 1.5;
       position: relative;
@@ -98,7 +104,7 @@ mat-card-title {
         font-family: "Material Icons";
         content: "format_quote";
         font-size: 26rem;
-        color: rgba(255,255,255,.3)
+        color: rgba(255,255,255,.2)
       }
 
       &:before {

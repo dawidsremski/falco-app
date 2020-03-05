@@ -5,7 +5,7 @@
     </app-section-header>
     <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="center start"
          fxLayoutAlign.lt-sm="center"
-         fxLayoutGap="5% grid" fxLayoutGap.lt-lg="10% grid">
+         fxLayoutGap="2.5% grid" fxLayoutGap.lt-lg="10% grid">
       <article fxFlex="20%" fxFlex.lt-lg="35%" fxFlex.lt-sm="100%">
         <figure class="figure" fxLayout="column" fxLayoutAlign="center center" data-aos-anchor-placement="center-bottom"
                 data-aos="fade-right" data-aos-anchor="#icon-1">
@@ -53,6 +53,50 @@
       </article>
     </div>
   </section>
+  <section fxLayout="row">
+    <div fxLayout="row" fxFlex="50%" fxLayoutAlign="center center" style="
+    height: 500px">
+      <div fxLayout="column" fxLayoutAlign="start" style="
+           height: 100%;
+           width: 100%;
+           background-color: rgb(0,102,73);
+           background-image: url('assets/harvester.jpeg');
+           background-position: 100% 100%;
+           background-size: cover">
+      </div>
+      <!--        <div fxLayout="row" fxLayoutAlign="center center" style="-->
+      <!--        background: linear-gradient(0deg, rgba(0,0,0,0) 60%, rgba(255,255,255,1) 95%);-->
+      <!--        height: 100%;-->
+      <!--        width: 100%">-->
+      <!--                    <div style="background-image: url('assets/DSC02034.jpg');-->
+      <!--                  background-size: cover;-->
+      <!--                  width: 80%;-->
+      <!--                  height: 80%">-->
+      <!--                    </div>-->
+      <!--        </div>-->
+      <!--      </div>-->
+    </div>
+    <div fxLayout="column" fxFlex="50%" fxLayoutAlign="start center" style="
+    background-color: rgb(255,255,255);
+    padding: 3rem 3rem;">
+      <app-section-header title="Lorem ipsum" style="margin-bottom: 1.5rem">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod:
+      </app-section-header>
+      <p style="font-weight: 300">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+    </div>
+  </section>
+  <section id="counter-section" fxLayout="column" fxLayoutAlign.lt-sm="center center">
+    <app-section-header title="W liczbach">
+      Posiadamy rozbudowany park maszyn oraz wykwalifikowane zasoby kadrowe:
+    </app-section-header>
+    <app-counter></app-counter>
+  </section>
   <section id="icons-2">
     <div class="content" fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="center start"
          fxLayoutAlign.lt-sm="center"
@@ -65,12 +109,6 @@
           <br>~Henryk&nbsp;Słowikowski, właściciel</p>
       </article>
     </div>
-  </section>
-  <section id="counter-section" fxLayout="column" fxLayoutAlign.lt-sm="center center">
-    <app-section-header title="W liczbach">
-      Posiadamy rozbudowany park maszyn oraz wykwalifikowane zasoby kadrowe:
-    </app-section-header>
-    <app-counter></app-counter>
   </section>
   <section id="map">
     <agm-map [latitude]="53.526871" [longitude]="20.717799" [zoom]="15" [scrollwheel]="false"
@@ -89,7 +127,7 @@
       </agm-marker>
     </agm-map>
   </section>
-  <section id="partners" class="mat-elevation-z1" fxLayout="column" fxLayoutAlign.lt-sm="center center">
+  <section id="partners" fxLayout="column" fxLayoutAlign.lt-sm="center center">
     <app-section-header title="Zaufali nam">
       Z naszych usług korzystają renomowane firmy oraz organizacje takie jak:
     </app-section-header>
@@ -98,79 +136,79 @@
       <img src="assets/partners/lp_logo.svg" style="height: 6rem" alt="Lasy Państwowe">
     </div>
   </section>
-  <section id="cards">
-    <div class="content">
-      <div class="card-box">
-        <mat-card class="mat-elevation-z0" fxLayout="column" data-aos-anchor-placement="center-bottom"
-                  data-aos="fade-right">
-          <figure class="image"
-                  style="background-image: url('assets/forwarder_bg.jpeg');"></figure>
-          <mat-card-content>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex
-              ea commodo consequat.</p>
-          </mat-card-content>
-        </mat-card>
-      </div>
-      <div class="card-box">
-        <mat-card class="mat-elevation-z0" fxLayout="column" data-aos-anchor-placement="center-bottom"
-                  data-aos="fade-left">
-          <mat-card-header>
-            <mat-card-title>
-              Lorem ipsum
-            </mat-card-title>
-          </mat-card-header>
-          <mat-card-content>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex
-              ea commodo consequat.</p>
-            <button mat-flat-button color="accent" class="mat-flat-button mat-button-base mat-accent"
-                    routerLink="">
-              <span class="mat-button-wrapper">Przycisk</span>
-            </button>
-          </mat-card-content>
-        </mat-card>
-      </div>
-      <div class="card-box">
-        <mat-card class="mat-elevation-z0" fxLayout="column" data-aos-anchor-placement="center-bottom"
-                  data-aos="fade-up">
-          <figure class="image" style="background-image: url('assets/harvester.jpeg');"></figure>
-          <mat-card-content>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex
-              ea commodo consequat.</p>
-            <button mat-flat-button color="accent" class="mat-flat-button mat-button-base mat-accent"
-                    routerLink="">
-              <span class="mat-button-wrapper">Przycisk</span>
-            </button>
-          </mat-card-content>
-        </mat-card>
-      </div>
-      <div class="card-box">
-        <mat-card class="mat-elevation-z0" fxLayout="column" data-aos-anchor-placement="center-bottom"
-                  data-aos="fade-up">
-          <figure class="image" style="background-image: url('assets/saw.jpg');"></figure>
-          <mat-card-content>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex
-              ea commodo consequat.</p>
-          </mat-card-content>
-        </mat-card>
-      </div>
-      <div class="card-box">
-        <mat-card class="mat-elevation-z0" fxLayout="column" data-aos-anchor-placement="center-bottom"
-                  data-aos="fade-up">
-          <figure class="image" style="background-image: url('assets/header-bg.jpg');"></figure>
-          <mat-card-content>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua.</p>
-          </mat-card-content>
-        </mat-card>
-      </div>
-    </div>
-  </section>
+  <!--  <section id="cards">-->
+  <!--    <div class="content">-->
+  <!--      <div class="card-box">-->
+  <!--        <mat-card class="mat-elevation-z0" fxLayout="column" data-aos-anchor-placement="center-bottom"-->
+  <!--                  data-aos="fade-right">-->
+  <!--          <figure class="image"-->
+  <!--                  style="background-image: url('assets/forwarder_bg.jpeg');"></figure>-->
+  <!--          <mat-card-content>-->
+  <!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et-->
+  <!--              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip-->
+  <!--              ex-->
+  <!--              ea commodo consequat.</p>-->
+  <!--          </mat-card-content>-->
+  <!--        </mat-card>-->
+  <!--      </div>-->
+  <!--      <div class="card-box">-->
+  <!--        <mat-card class="mat-elevation-z0" fxLayout="column" data-aos-anchor-placement="center-bottom"-->
+  <!--                  data-aos="fade-left">-->
+  <!--          <mat-card-header>-->
+  <!--            <mat-card-title>-->
+  <!--              Lorem ipsum-->
+  <!--            </mat-card-title>-->
+  <!--          </mat-card-header>-->
+  <!--          <mat-card-content>-->
+  <!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et-->
+  <!--              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip-->
+  <!--              ex-->
+  <!--              ea commodo consequat.</p>-->
+  <!--            <button mat-flat-button color="accent" class="mat-flat-button mat-button-base mat-accent"-->
+  <!--                    routerLink="">-->
+  <!--              <span class="mat-button-wrapper">Przycisk</span>-->
+  <!--            </button>-->
+  <!--          </mat-card-content>-->
+  <!--        </mat-card>-->
+  <!--      </div>-->
+  <!--      <div class="card-box">-->
+  <!--        <mat-card class="mat-elevation-z0" fxLayout="column" data-aos-anchor-placement="center-bottom"-->
+  <!--                  data-aos="fade-up">-->
+  <!--          <figure class="image" style="background-image: url('assets/harvester.jpeg');"></figure>-->
+  <!--          <mat-card-content>-->
+  <!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et-->
+  <!--              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip-->
+  <!--              ex-->
+  <!--              ea commodo consequat.</p>-->
+  <!--            <button mat-flat-button color="accent" class="mat-flat-button mat-button-base mat-accent"-->
+  <!--                    routerLink="">-->
+  <!--              <span class="mat-button-wrapper">Przycisk</span>-->
+  <!--            </button>-->
+  <!--          </mat-card-content>-->
+  <!--        </mat-card>-->
+  <!--      </div>-->
+  <!--      <div class="card-box">-->
+  <!--        <mat-card class="mat-elevation-z0" fxLayout="column" data-aos-anchor-placement="center-bottom"-->
+  <!--                  data-aos="fade-up">-->
+  <!--          <figure class="image" style="background-image: url('assets/saw.jpg');"></figure>-->
+  <!--          <mat-card-content>-->
+  <!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et-->
+  <!--              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip-->
+  <!--              ex-->
+  <!--              ea commodo consequat.</p>-->
+  <!--          </mat-card-content>-->
+  <!--        </mat-card>-->
+  <!--      </div>-->
+  <!--      <div class="card-box">-->
+  <!--        <mat-card class="mat-elevation-z0" fxLayout="column" data-aos-anchor-placement="center-bottom"-->
+  <!--                  data-aos="fade-up">-->
+  <!--          <figure class="image" style="background-image: url('assets/header-bg.jpg');"></figure>-->
+  <!--          <mat-card-content>-->
+  <!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et-->
+  <!--              dolore magna aliqua.</p>-->
+  <!--          </mat-card-content>-->
+  <!--        </mat-card>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </section>-->
 </main>
