@@ -1,0 +1,10 @@
+<header fxLayout="row" fxLayoutAlign="center"
+        style="position: relative">
+  <div class="bg"></div>
+  <div class="header-overlay" fxLayout="row" fxFlex="100%" fxLayoutAlign="start"
+       [ngClass]="(isHandset$ | async) ? 'handset' : ''">
+    <div fxLayout="column" fxLayoutAlign="space-between">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</header>

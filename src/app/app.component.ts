@@ -13,16 +13,20 @@ export class AppComponent {
       link: '/'
     },
     {
+      title: 'Tartak',
+      link: '/tartak'
+    },
+    {
       title: 'Praca',
-      link: ''
+      link: '/praca'
     },
     {
       title: 'Zapytania ofertowe',
-      link: ''
+      link: '/zapytania-ofertowe'
     },
     {
       title: 'Kontakt',
-      link: ''
+      link: '/kontakt'
     },
   ];
 }

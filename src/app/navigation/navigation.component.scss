@@ -1,18 +1,53 @@
+@import '../../variables.scss';
+
 .mat-drawer-container {
   overflow: visible;
   background-color: rgb(248, 248, 248);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .mat-sidenav-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
 
   .mat-drawer-content {
     overflow: visible;
   }
 }
 
+mat-sidenav-container {
+  mat-sidenav {
+    mat-nav-list {
+      margin-top: 0;
+    }
+  }
+}
+
 .mat-toolbar {
-  height: 3rem;
+
+  height: 64px;
+  font-family: inherit;
+  font-weight: 400;
+
+  &.menu-header {
+    background-color: mat-color($falco-app-accent);
+    color: inherit;
+  }
+}
+
+.mat-toolbar {
   position: sticky;
   top: 0;
+  padding-top: 0;
   z-index: 2;
   color: #fff;
+
+  mat-nav-list {
+    height: 100%;
+  }
 
   .mat-list-base {
     padding-top: 0;
@@ -23,32 +58,79 @@ mat-sidenav {
   mat-nav-list {
     margin-top: 3rem;
     padding: 0;
-  }
-}
 
-.mat-toolbar {
-  background-color: #fff;
-  color: #006649;
+    .mat-list-item {
+      font-family: inherit;
+    }
+  }
 }
 
 .mat-button {
   box-sizing: border-box;
   border-radius: 0;
-  padding: 0 20px;
-  line-height: 48px;
+  padding: .5rem 2rem 0 2rem;
+  line-height: 50px;
+  font-weight: 400;
 
   &.active {
-    position: relative;
+    background: #f8f8f8;
+    color: mat-color($falco-app-primary);
+  }
+}
 
-    &:after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      border-bottom: 4px solid #006649;
-      content: "";
+.mat-toolbar {
+  padding: 0 1rem;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+
+  .mat-button {
+    &:hover {
+      position: relative;
+      background: none;
+
+      &:after {
+        position: absolute;
+        top: auto;
+        bottom: -6px;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background: mat-color($falco-app-accent);
+        content: "";
+      }
+
+      &.active {
+        background: #f8f8f8;
+
+        &:after {
+          background: mat-color($falco-app-primary);
+        }
+      }
     }
   }
+
+  &.toggled {
+    color: mat-color($falco-app-primary);
+
+    .mat-button {
+      &.active {
+        position: relative;
+        background: none;
+
+        &:after {
+          position: absolute;
+          top: auto;
+          bottom: -6px;
+          left: 0;
+          width: 100%;
+          height: 6px;
+          background: mat-color($falco-app-primary);
+          content: "";
+        }
+      }
+    }
+  }
+
 }
 
 .sidenav {
@@ -57,7 +139,7 @@ mat-sidenav {
 
 .top-header {
   padding: 1.5rem 3rem;
-  min-height: 7rem;
+  height: 9.5rem;
 
   @media all and (max-width: 600px) {
     padding: 1.5rem 1.5rem;
@@ -73,7 +155,12 @@ mat-sidenav {
 }
 
 address {
-  font-style: normal;
+  background: mat-color($falco-app-accent);
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  right: 3rem;
+  z-index: 3;
 
   h2 {
     font-size: 1rem;
@@ -101,8 +188,7 @@ address {
     text-decoration: inherit;
 
     &:hover {
-      color: #006649;
+      color: mat-color($falco-app-primary);
     }
   }
 }
-

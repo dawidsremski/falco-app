@@ -3,8 +3,75 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$falco-app-primary: mat-palette($mat-teal);
-$falco-app-accent: mat-palette($mat-orange, A200, A100, A400);
+
+$falco-green: (
+  50 : #e0ede9,
+  100 : #b3d1c8,
+  200 : #80b3a4,
+  300 : #4d9480,
+  400 : #267d64,
+  500 : #006649,
+  600 : #005e42,
+  700 : #005339,
+  800 : #004931,
+  900 : #003123,
+  A100 : #6effb7,
+  A200 : #3bff9d,
+  A400 : #08ff84,
+  A700 : #00ee77,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$falco-yellow: (
+  50 : #fff9e8,
+  100 : #fff1c6,
+  200 : #ffe7a0,
+  300 : #ffdd79,
+  400 : #ffd65d,
+  500 : #ffcf40,
+  600 : #ffca3a,
+  700 : #ffc332,
+  800 : #ffbd2a,
+  900 : #ffb21c,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #ffedcd,
+  A700 : #ffe3b3,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$falco-app-primary: mat-palette($falco-green);
+$falco-app-accent: mat-palette($falco-yellow);
 
 // The warn palette is optional (defaults to red).
 $falco-app-warn: mat-palette($mat-red);

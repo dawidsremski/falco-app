@@ -1,4 +1,4 @@
-/* autoprefixer grid: autoplace */
+@import "../../../../variables.scss";
 
 main {
   overflow: hidden;
@@ -36,11 +36,14 @@ mat-card-title {
   color: #fff
 }
 
-app-section-header {
-  margin-bottom: 5rem;
-}
+#offer {
+  position: relative;
+  padding: 3rem 1.5rem 7rem 1.5rem;
 
-#icons-1 {
+  #offer-anchor {
+    position: absolute;
+    top: -128px;
+  }
 
   img {
     width: 100px;
@@ -52,23 +55,10 @@ app-section-header {
     }
   }
 
-  h2 {
+  h3 {
     text-transform: uppercase;
-    font-size: 1.1rem;
     position: relative;
-    margin: 1.5rem 0 1rem 0;
-    font-weight: 400;
-
-    //&:after {
-    //  width: 50px;
-    //  height: 3px;
-    //  background-color: #006649;
-    //  content: "";
-    //  bottom: -1rem;
-    //  left: 50%;
-    //  transform: translateX(-50%);
-    //  position: absolute;
-    //}
+    margin-top: 1.5rem;
   }
 
   p {
@@ -77,14 +67,20 @@ app-section-header {
   }
 }
 
-#icons-2 {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+#ecology {
+  .forest-background {
+    background-color: mat-color($falco-app-primary);
+    background-image: url('../../../../assets/forest_bg_1280.jpeg');
+    background-size: cover;
+    background-position: 100% 100%;
+  }
+}
+
+#quotation {
   background-size: cover;
   background-attachment: fixed;
   background-position: 50% 100%;
-  background-image: url("../../../../assets/forwarder_bg.jpeg");
+  background-image: url("../../../../assets/photos/Photo_2_2560_blur.jpg");
   color: #fff;
 
   .content {
@@ -98,24 +94,6 @@ app-section-header {
       font-family: "Montserrat", sans-serif;
       line-height: 1.5;
       position: relative;
-
-      &:before, &:after {
-        position: absolute;
-        font-family: "Material Icons";
-        content: "format_quote";
-        font-size: 26rem;
-        color: rgba(255,255,255,.2)
-      }
-
-      &:before {
-        top: -18rem;
-        left: -8rem;
-      }
-
-      &:after {
-        bottom: -18rem;
-        right: -8rem;
-      }
     }
 
     @media all and (max-width: 600px) {
@@ -126,7 +104,7 @@ app-section-header {
   }
 }
 
-#icons-1, #counter-section {
+#counter-section {
   padding: 7rem 1.5rem;
 }
 
@@ -280,7 +258,7 @@ app-section-header {
 }
 
 @supports (-webkit-overflow-scrolling: touch) {
-  #icons-2, #cards {
+  #quotation, #cards {
     background-attachment: scroll;
   }
 }

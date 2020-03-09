@@ -1,5 +1,6 @@
 <main fxLayout="column">
-  <section id="icons-1" fxLayout="column">
+  <section id="offer" class="content-section-big" fxLayout="column" style="position: relative">
+    <span id="offer-anchor" style="position:absolute; top: -128px"></span>
     <app-section-header title="Nasza oferta">
       Firma Falco oferuje szeroki wachlarz usług:
     </app-section-header>
@@ -8,20 +9,31 @@
          fxLayoutGap="2.5% grid" fxLayoutGap.lt-lg="10% grid">
       <article fxFlex="20%" fxFlex.lt-lg="35%" fxFlex.lt-sm="100%">
         <figure class="figure" fxLayout="column" fxLayoutAlign="center center" data-aos-anchor-placement="center-bottom"
-                data-aos="fade-right" data-aos-anchor="#icon-1">
+                data-aos="zoom-in" data-aos-anchor="#icon-1">
+          <img src="assets/icons/saw.svg" alt="Pozyskanie">
+          <figcaption>
+            <h3 id="icon-1">Pozyskanie</h3>
+            <p>Pozyskujemu zarówno dla Lasów Państwowych jak tez innych odbiorców np.&nbsp;wycinka pod autostrady,
+              drogi szybkiego ruchu, linie brzegowe itp.</p>
+          </figcaption>
+        </figure>
+      </article>
+      <article fxFlex="20%" fxFlex.lt-lg="35%" fxFlex.lt-sm="100%">
+        <figure class="figure" fxLayout="column" fxLayoutAlign="center center" data-aos-anchor-placement="center-bottom"
+                data-aos="fade-right" data-aos-anchor="#icon-2">
           <img src="assets/icons/truck.svg" alt="Zrywka">
           <figcaption>
-            <h2 id="icon-1">Zrywka</h2>
+            <h3 id="icon-2">Zrywka</h3>
             <p>Wykonujemy zrywkę półpodwieszaną drewna wielkowymiarowego oraz zrywkę nasiębierną drewna stosowanego i&nbsp;kłodowanego.</p>
           </figcaption>
         </figure>
       </article>
       <article fxFlex="20%" fxFlex.lt-lg="35%" fxFlex.lt-sm="100%">
         <figure class="figure" fxLayout="column" fxLayoutAlign="center center" data-aos-anchor-placement="center-bottom"
-                data-aos="zoom-in" data-aos-anchor="#icon-2">
+                data-aos="zoom-in" data-aos-anchor="#icon-3">
           <img src="assets/icons/trees.svg" alt="Zagospodarowanie">
           <figcaption>
-            <h2 id="icon-2">Zagospodarowanie</h2>
+            <h3 id="icon-3">Zagospodarowanie</h3>
             <p>Wykonujemy wszelkie prace związane z&nbsp;zagospodarowaniem takie jak przygotowanie gleby, zalesienia
               oraz
               odnowienia,
@@ -31,21 +43,10 @@
       </article>
       <article fxFlex="20%" fxFlex.lt-lg="35%" fxFlex.lt-sm="100%">
         <figure class="figure" fxLayout="column" fxLayoutAlign="center center" data-aos-anchor-placement="center-bottom"
-                data-aos="zoom-in" data-aos-anchor="#icon-3">
-          <img src="assets/icons/saw.svg" alt="Pozyskanie">
-          <figcaption>
-            <h2 id="icon-3">Pozyskanie</h2>
-            <p>Pozyskujemu zarówno dla Lasów Państwowych jak tez innych odbiorców np.&nbsp;wycinka pod autostrady,
-              drogi szybkiego ruchu, linie brzegowe itp.</p>
-          </figcaption>
-        </figure>
-      </article>
-      <article fxFlex="20%" fxFlex.lt-lg="35%" fxFlex.lt-sm="100%">
-        <figure class="figure" fxLayout="column" fxLayoutAlign="center center" data-aos-anchor-placement="center-bottom"
                 data-aos="fade-left" data-aos-anchor="#icon-4">
           <img src="assets/icons/circular_saw.svg" alt="Tartak">
           <figcaption>
-            <h2 id="icon-4">Tartak</h2>
+            <h3 id="icon-4">Tartak</h3>
             <p>Pozyskujemu zarówno dla Lasów Państwowych jak tez innych odbiorców np.&nbsp;wycinka pod autostrady,
               drogi szybkiego ruchu, linie brzegowe itp.</p>
           </figcaption>
@@ -53,36 +54,15 @@
       </article>
     </div>
   </section>
-  <section fxLayout="row">
-    <div fxLayout="row" fxFlex="50%" fxLayoutAlign="center center" style="
-    height: 500px">
-      <div fxLayout="column" fxLayoutAlign="start" style="
-           height: 100%;
-           width: 100%;
-           background-color: rgb(0,102,73);
-           background-image: url('assets/harvester.jpeg');
-           background-position: 100% 100%;
-           background-size: cover">
-      </div>
-      <!--        <div fxLayout="row" fxLayoutAlign="center center" style="-->
-      <!--        background: linear-gradient(0deg, rgba(0,0,0,0) 60%, rgba(255,255,255,1) 95%);-->
-      <!--        height: 100%;-->
-      <!--        width: 100%">-->
-      <!--                    <div style="background-image: url('assets/DSC02034.jpg');-->
-      <!--                  background-size: cover;-->
-      <!--                  width: 80%;-->
-      <!--                  height: 80%">-->
-      <!--                    </div>-->
-      <!--        </div>-->
-      <!--      </div>-->
+  <section id="ecology" fxLayout="row">
+    <div class="forest-background" fxLayout="column" fxFlex="50%" fxHide.lt-sm fxLayoutAlign="center center">
     </div>
-    <div fxLayout="column" fxFlex="50%" fxLayoutAlign="start center" style="
-    background-color: rgb(255,255,255);
-    padding: 3rem 3rem;">
-      <app-section-header title="Lorem ipsum" style="margin-bottom: 1.5rem">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod:
+    <div class="content-section white-bg" fxLayout="column" fxFlex="50%" fxFlex.lt-sm="100%"
+         fxLayoutAlign="start center">
+      <app-section-header title="Ekologia">
+        Działając na rzecz ekologii wspieramy zrównoważoną gospodarkę leśną:
       </app-section-header>
-      <p style="font-weight: 300">
+      <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -91,13 +71,14 @@
       </p>
     </div>
   </section>
-  <section id="counter-section" fxLayout="column" fxLayoutAlign.lt-sm="center center">
+  <section id="counter-section" class="content-section-big" fxLayout="column" fxLayoutAlign.lt-sm="center center">
     <app-section-header title="W liczbach">
       Posiadamy rozbudowany park maszyn oraz wykwalifikowane zasoby kadrowe:
     </app-section-header>
     <app-counter></app-counter>
   </section>
-  <section id="icons-2">
+  <section id="quotation">
+    <div class="bg"></div>
     <div class="content" fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="center start"
          fxLayoutAlign.lt-sm="center"
          fxLayoutGap.gt-xs="10%">
@@ -127,13 +108,13 @@
       </agm-marker>
     </agm-map>
   </section>
-  <section id="partners" fxLayout="column" fxLayoutAlign.lt-sm="center center">
+  <section id="partners" class="content-section-big" fxLayout="column" fxLayoutAlign.lt-sm="center center">
     <app-section-header title="Zaufali nam">
       Z naszych usług korzystają renomowane firmy oraz organizacje takie jak:
     </app-section-header>
-    <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="center center" fxLayoutGap="2rem" data-aos="fade-up">
-      <img src="assets/partners/velux_logo.svg" style="height: 4rem" alt="Velux">
+    <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="center center" fxLayoutGap="3rem" data-aos="fade-up">
       <img src="assets/partners/lp_logo.svg" style="height: 6rem" alt="Lasy Państwowe">
+      <img src="assets/partners/velux_logo.svg" style="height: 2rem" alt="Velux">
     </div>
   </section>
   <!--  <section id="cards">-->

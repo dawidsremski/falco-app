@@ -10,7 +10,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import {HeaderComponent} from './pages/home/header/header.component';
+import {HeaderComponent} from './common/header/header.component';
 import {HomeComponent} from './pages/home/home.component';
 import {FlexLayoutModule, FlexModule, GridModule} from '@angular/flex-layout';
 import {MainComponent} from './pages/home/main/main.component';
@@ -23,6 +23,7 @@ import {CookieSnackbarComponent} from './cookie-snackbar/cookie-snackbar.compone
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {CookieService} from 'ngx-cookie-service';
 import { SectionHeaderComponent } from './common/section-header/section-header.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SectionHeaderComponent } from './common/section-header/section-header.c
     FooterComponent,
     CounterComponent,
     CookieSnackbarComponent,
-    SectionHeaderComponent
+    SectionHeaderComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

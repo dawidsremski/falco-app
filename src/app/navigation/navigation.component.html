@@ -9,9 +9,9 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <header class="top-header" fxLayout="row" fxLayoutAlign="space-between">
+    <header #topHeader class="top-header" fxLayout="row" fxLayoutAlign="space-between">
       <img src="assets/logo_corrected.svg">
-      <address fxLayout="column" fxLayoutAlign="center">
+      <address fxLayout="column" fxLayoutAlign="center" fxHide.lt-sm>
         <h2>Kontakt</h2>
         <mat-divider></mat-divider>
         <p><span class="material-icons">phone</span>(+48) 89 621 33 18</p>
@@ -20,7 +20,7 @@
         </p>
       </address>
     </header>
-    <mat-toolbar role="heading">
+    <mat-toolbar role="heading" [@opaqueSolid]="isToggled ? 'solid' : 'opaque'" [ngClass]="isToggled? 'toggled' : ''">
       <button
         type="button"
         aria-label="Toggle sidenav"

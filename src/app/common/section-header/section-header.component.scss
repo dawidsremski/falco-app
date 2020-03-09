@@ -1,11 +1,11 @@
+@import '../../../variables.scss';
+
 .section-header {
   .section-header-content {
     max-width: 300px;
     text-align: center;
 
     h2 {
-      font-size: 2rem;
-      font-weight: 400;
       text-transform: uppercase;
       margin: 0;
     }
@@ -19,7 +19,7 @@
       &:after {
         width: 125px;
         height: 6px;
-        background-color: #006649;
+        background-color: mat-color($falco-app-primary);
         content: "";
         bottom: -1.5rem;
         left: 50%;
