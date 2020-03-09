@@ -5,50 +5,17 @@
   <meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover'>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <title>Falco</title>
-  <base href="/falco-app/">  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500|Open+Sans:300,400|Roboto|Josefin+Sans&display=swap&subset=latin-ext"
-        rel="stylesheet">
+  <base href="/falco-app/">  <link
+    href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500|Open+Sans:300,400|Roboto|Josefin+Sans&display=swap&subset=latin-ext"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="styles.572e338664b3244f0ba0.css"></head>
 <body>
 <app-root></app-root>
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" async></script>
 <script>
 
   //Fixes jumping background when scrolling on IE
-
-  var body = $('body');
-
-  if (navigator.userAgent.match(/Trident\/7\./)) {
-
-    body.on("mousewheel", function () {
-      event.preventDefault();
-
-      var wheelDelta = event.wheelDelta;
-
-      var currentScrollPosition = window.pageYOffset;
-      window.scrollTo(0, currentScrollPosition - wheelDelta);
-    });
-
-    body.keydown(function (e) {
-      e.preventDefault();
-      var currentScrollPosition = window.pageYOffset;
-
-      switch (e.which) {
-
-        case 38: // up
-          window.scrollTo(0, currentScrollPosition - 120);
-          break;
-
-        case 40: // down
-          window.scrollTo(0, currentScrollPosition + 120);
-          break;
-
-        default:
-          return;
-      }
-    });
-  }
 
   //End of fix
   //Fixes flexbox height issue in counter on iOS devices
@@ -64,38 +31,8 @@
 
   //End of fix
 
-  function dt_counterFlip() {
-    var triggered = false;
-    $(window).scroll(function () {
-      var oTop = $('#counter').offset().top - window.innerHeight;
-      if (triggered === false && $(window).scrollTop() > oTop) {
-        $('.count').each(function () {
-          var $this = $(this),
-            countTo = $this.attr('data-count');
-          $({
-            countNum: 0
-          }).animate({
-              countNum: countTo
-            },
-            {
-              duration: 2000,
-              easing: 'swing',
-              step: function () {
-                $this.text(Math.floor(this.countNum));
-              },
-              complete: function () {
-                $this.text(this.countNum);
-              }
-            });
-        });
-        triggered = true;
-      }
-    });
-  }
-
   $(document).ready(function () {
     fixCounter();
-    dt_counterFlip();
   });
 
   $(window).resize(function () {
@@ -103,5 +40,5 @@
   });
 
 </script>
-<script src="runtime-es2015.c5fa8325f89fc516600b.js" type="module"></script><script src="runtime-es5.c5fa8325f89fc516600b.js" nomodule defer></script><script src="polyfills-es5.3e8196928d184a6e5319.js" nomodule defer></script><script src="polyfills-es2015.5b10b8fd823b6392f1fd.js" type="module"></script><script src="scripts.9b1207587ef3aa866146.js" defer></script><script src="main-es2015.0aa25223bd2d776e4eee.js" type="module"></script><script src="main-es5.0aa25223bd2d776e4eee.js" nomodule defer></script></body>
+<script src="runtime-es2015.c5fa8325f89fc516600b.js" type="module"></script><script src="runtime-es5.c5fa8325f89fc516600b.js" nomodule defer></script><script src="polyfills-es5.3e8196928d184a6e5319.js" nomodule defer></script><script src="polyfills-es2015.5b10b8fd823b6392f1fd.js" type="module"></script><script src="scripts.9b1207587ef3aa866146.js" defer></script><script src="vendor-es2015.5262b8e8ff3a83cfeda9.js" type="module"></script><script src="vendor-es5.5262b8e8ff3a83cfeda9.js" nomodule defer></script><script src="main-es2015.9018cb21f9e994468205.js" type="module"></script><script src="main-es5.9018cb21f9e994468205.js" nomodule defer></script></body>
 </html>
