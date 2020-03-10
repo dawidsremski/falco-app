@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@import '../../../variables.scss';
 
 .mat-drawer-container {
   overflow: visible;
@@ -26,23 +26,19 @@ mat-sidenav-container {
   }
 }
 
-.mat-toolbar {
-
-  height: 64px;
-  font-family: inherit;
-  font-weight: 400;
-
-  &.menu-header {
-    background-color: mat-color($falco-app-accent);
-    color: inherit;
-  }
+#menu-header {
+  background-color: mat-color($falco-app-accent);
+  color: inherit;
 }
 
 .mat-toolbar {
+  height: 64px;
   position: sticky;
   top: 0;
   padding-top: 0;
   z-index: 2;
+  font-family: inherit;
+  font-weight: 400;
   color: #fff;
 
   mat-nav-list {

@@ -1,26 +1,27 @@
-<mat-sidenav-container class="sidenav-container" [ngClass]="isCookieDialogOpened ? 'blur' : ''">
+<mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    aria-labelledby="menu-header"
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="false">
-    <mat-toolbar class="menu-header">Menu</mat-toolbar>
-    <mat-nav-list>
+    <mat-toolbar id="menu-header">Menu</mat-toolbar>
+    <mat-nav-list role="navigation" aria-label="Menu">
       <a *ngFor="let item of menuItems" mat-list-item routerLink="{{item.link}}" (click)="drawer.toggle()">{{item.title}}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <header #topHeader class="top-header" fxLayout="row" fxLayoutAlign="space-between">
-      <img src="assets/logo_corrected.svg">
+      <img src="assets/logo_corrected.svg" alt="Falco">
       <address fxLayout="column" fxLayoutAlign="center" fxHide.lt-sm>
         <h2>Kontakt</h2>
         <mat-divider></mat-divider>
-        <p><span class="material-icons">phone</span>(+48) 89 621 33 18</p>
-        <p>
+        <p><span class="material-icons" aria-label="Numer telefonu">phone</span>(+48) 89 621 33 18</p>
+        <p aria-label="Adres email">
           <span class="material-icons">mail_outline</span><a href="mailto: biuro@falcojedwabno.pl">biuro@falcojedwabno.pl</a>
         </p>
       </address>
     </header>
-    <mat-toolbar role="heading" [@opaqueSolid]="isToggled ? 'solid' : 'opaque'" [ngClass]="isToggled? 'toggled' : ''">
+    <mat-toolbar role="navigation" aria-label="Menu" [@opaqueSolid]="isToggled ? 'solid' : 'opaque'" [ngClass]="isToggled? 'toggled' : ''">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -32,6 +33,7 @@
       <mat-nav-list class="top-bar" *ngIf="!(isHandset$ | async)">
         <a mat-button *ngFor="let item of menuItems"
           routerLink="{{item.link}}"
+          [attr.aria-disabled]="this.router.url === item.link"
           [class.active]="this.router.url === item.link">
           {{item.title}}</a>
       </mat-nav-list>

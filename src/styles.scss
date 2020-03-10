@@ -27,7 +27,7 @@ $custom-typography: mat-typography-config(
 @include mat-core($custom-typography);
 
 html {
-  scroll-behavior: smooth;
+  //scroll-behavior: smooth;
 }
 
 html, body {

@@ -6,103 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <title>Falco</title>
   <base href="/">
-  <link
-    href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500|Open+Sans:300,400|Roboto|Josefin+Sans&display=swap&subset=latin-ext"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 <app-root></app-root>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" async></script>
-<script>
-
-  //Fixes jumping background when scrolling on IE
-
-  var body = $('body');
-
-  if (navigator.userAgent.match(/Trident\/7\./)) {
-
-    body.on("mousewheel", function () {
-      event.preventDefault();
-
-      var wheelDelta = event.wheelDelta;
-
-      var currentScrollPosition = window.pageYOffset;
-      window.scrollTo(0, currentScrollPosition - wheelDelta);
-    });
-
-    body.keydown(function (e) {
-      e.preventDefault();
-      var currentScrollPosition = window.pageYOffset;
-
-      switch (e.which) {
-
-        case 38: // up
-          window.scrollTo(0, currentScrollPosition - 120);
-          break;
-
-        case 40: // down
-          window.scrollTo(0, currentScrollPosition + 120);
-          break;
-
-        default:
-          return;
-      }
-    });
-  }
-
-  //End of fix
-  //Fixes flexbox height issue in counter on iOS devices
-
-  const fixCounter = function () {
-
-    const counter = $('#counter');
-
-    if (counter.css('flex-direction') === 'column') {
-      counter.attr('style', '');
-    }
-  };
-
-  //End of fix
-
-  function dt_counterFlip() {
-    var triggered = false;
-    $(window).scroll(function () {
-      var oTop = $('#counter').offset().top - window.innerHeight;
-      if (triggered === false && $(window).scrollTop() > oTop) {
-        $('.count').each(function () {
-          var $this = $(this),
-            countTo = $this.attr('data-count');
-          $({
-            countNum: 0
-          }).animate({
-              countNum: countTo
-            },
-            {
-              duration: 2000,
-              easing: 'swing',
-              step: function () {
-                $this.text(Math.floor(this.countNum));
-              },
-              complete: function () {
-                $this.text(this.countNum);
-              }
-            });
-        });
-        triggered = true;
-      }
-    });
-  }
-
-  $(document).ready(function () {
-    fixCounter();
-    dt_counterFlip();
-  });
-
-  $(window).resize(function () {
-    fixCounter();
-  });
-
-</script>
+<link
+  href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500|Open+Sans:300,400|Roboto|Josefin+Sans&display=swap&subset=latin-ext"
+  rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </body>
 </html>

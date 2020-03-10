@@ -1,13 +1,9 @@
-import {Component, Directive, ElementRef, HostListener, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, HostListener, Input, OnInit, ViewChild} from '@angular/core';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {Observable} from 'rxjs';
 import {map, shareReplay} from 'rxjs/operators';
 import {Router} from '@angular/router';
-import {MatSnackBar} from '@angular/material/snack-bar';
-import {CookieSnackbarComponent} from '../cookie-snackbar/cookie-snackbar.component';
-import {CookieService} from 'ngx-cookie-service';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import {MatToolbar} from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-navigation',
@@ -30,8 +26,7 @@ import {MatToolbar} from '@angular/material/toolbar';
 
 export class NavigationComponent implements OnInit {
 
-  constructor(private breakpointObserver: BreakpointObserver, public router: Router, public snackBar: MatSnackBar,
-              public cookieService: CookieService) {
+  constructor(private breakpointObserver: BreakpointObserver, public router: Router) {
   }
 
   isCookieDialogOpened = false;
@@ -46,9 +41,9 @@ export class NavigationComponent implements OnInit {
       shareReplay()
     );
 
-  openSnackBar(): void {
-    this.snackBar.openFromComponent(CookieSnackbarComponent);
-  }
+  // openSnackBar(): void {
+  //   this.snackBar.openFromComponent(CookieSnackbarComponent);
+  // }
 
   @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
 
@@ -68,8 +63,8 @@ export class NavigationComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.cookieService.get('falco_cookies_accepted') !== 'true') {
-      this.openSnackBar();
-    }
+    // if (this.cookieService.get('falco_cookies_accepted') !== 'true') {
+    //   this.openSnackBar();
+    // }
   }
 }

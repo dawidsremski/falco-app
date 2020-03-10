@@ -2,9 +2,6 @@ import {Component} from '@angular/core';
 import {MatSnackBarRef} from '@angular/material/snack-bar';
 import {CookieService} from 'ngx-cookie-service';
 
-class DialogOverviewExampleDialog {
-}
-
 @Component({
   selector: 'app-cookie-snackbar',
   templateUrl: './cookie-snackbar.component.html',
