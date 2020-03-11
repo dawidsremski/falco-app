@@ -2,7 +2,7 @@
         style="position: relative">
   <div class="bg"></div>
   <div class="header-overlay" fxLayout="row" fxFlex="100%" fxLayoutAlign="start"
-       [ngClass]="(isHandset$ | async) ? 'handset' : ''">
+       [class.handset]="isHandset$ | async" [class.big]="big">
     <div fxLayout="column" fxLayoutAlign="space-between">
       <ng-content></ng-content>
     </div>

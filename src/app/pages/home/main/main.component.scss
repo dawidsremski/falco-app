@@ -38,7 +38,7 @@ mat-card-title {
 
 #offer {
   position: relative;
-  padding: 3rem 1.5rem 7rem 1.5rem;
+  padding-top: 2rem;
 
   #offer-anchor {
     position: absolute;
@@ -104,161 +104,13 @@ mat-card-title {
   }
 }
 
-#counter-section {
-  padding: 7rem 1.5rem;
-}
-
 #partners {
   padding: 5rem 1.5rem;
   background-color: #fff;
 }
 
-#cards {
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: 50% 100%;
-  background-image: url("../../../../assets/forest_bg_2560.jpeg");
-
-  .content {
-    padding: 3rem 3rem;
-    background-color: rgba(225, 225, 225, .8);
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 2rem 1fr 2rem 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 2rem;
-
-    h2 {
-      margin-bottom: 2rem;
-    }
-
-    @media all and (max-width: 960px) {
-      -ms-grid-columns: 1fr 2rem 1fr;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    @media all and (max-width: 600px) {
-      display: flex;
-      flex-direction: column;
-      grid-gap: 0;
-    }
-  }
-
-  .card-box {
-
-    @media all and (max-width: 600px) {
-      margin-top: 2rem;
-
-      &:first-child {
-        margin-top: 0;
-      }
-    }
-
-    //IE11 grid fix
-
-    $maxCards: 50;
-
-    @media all and (min-width: 600px) {
-
-      $rows: ($maxCards - $maxCards % 2) / 2;
-
-      &:nth-child(2n) {
-        -ms-grid-column: 3;
-      }
-
-      @for $i from 1 through $rows {
-        @for $j from 0 through 1 {
-          &:nth-child(#{$i*2+1}n+#{$j}) {
-            -ms-grid-row: #{$i+1};
-            margin-top: 2rem;
-          }
-        }
-      }
-
-      @for $i from 1 through 2 {
-        &:nth-child(#{$i}) {
-          -ms-grid-row: 1;
-          margin-top: 0;
-        }
-      }
-    }
-
-    @media all and (min-width: 960px) {
-
-      $rows: ($maxCards - $maxCards % 3) / 3;
-
-      &:nth-child(3n) {
-        -ms-grid-column: 5;
-      }
-
-      @for $i from 1 through $rows {
-        @for $j from 0 through 2 {
-          &:nth-child(#{$i*4}n+#{$j}) {
-            -ms-grid-row: #{$i+1};
-            margin-top: 2rem;
-          }
-        }
-      }
-
-      @for $i from 1 through 3 {
-        &:nth-child(#{$i}) {
-          -ms-grid-row: 1;
-          margin-top: 0;
-        }
-      }
-    }
-
-    //end of IE11 grid fix
-
-    .mat-card {
-      height: 100%;
-      padding: 0 0 1rem;
-
-      .mat-card-header {
-        padding: 1rem;
-
-        .mat-card-header-text {
-          margin: 0;
-        }
-
-        .mat-card-title {
-          margin: 0;
-        }
-      }
-
-      p {
-        padding: 0 1rem 1rem 1rem;
-      }
-
-      .image {
-        min-height: 15rem;
-        background-size: cover;
-        background-position: 50% 50%;
-        flex-grow: 1;
-        margin: 0 0 1rem;
-        border-top-left-radius: inherit;
-        border-top-right-radius: inherit;
-      }
-
-      .mat-flat-button {
-        margin-left: 1rem;
-      }
-    }
-  }
-}
-
-@media all and (max-width: 600px) {
-  #cards .content {
-    padding: 3rem 1.5rem;
-  }
-
-  #counter-section {
-    padding: 3rem 3rem;
-  }
-}
-
 @supports (-webkit-overflow-scrolling: touch) {
-  #quotation, #cards {
+  #quotation {
     background-attachment: scroll;
   }
 }

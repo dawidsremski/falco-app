@@ -11,23 +11,13 @@ import {map, shareReplay} from 'rxjs/operators';
 
 export class HeaderComponent implements OnInit {
 
-  bgPos = '100% 50%';
-  bgYPosPercent = 50;
-  @Input() parallax = 0.075;
-  @Input() compact = false;
+  @Input() big = false;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
       shareReplay()
     );
-
-  @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
-
-    const y: number = window.pageYOffset;
-    this.bgYPosPercent = (50 - this.parallax * y >= 0) ? 50 - this.parallax * y : 0;
-    this.bgPos = '100% ' + this.bgYPosPercent + '%';
-  }
 
   constructor(private breakpointObserver: BreakpointObserver) {
   }

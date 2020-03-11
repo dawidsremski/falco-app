@@ -104,6 +104,7 @@ h3 {
 
 .content-section {
   padding: 3rem;
+  min-height: 75vh;
 
   @media all and (max-width: 600px) {
     padding: 3rem 1.5rem;
@@ -120,6 +121,9 @@ h3 {
 }
 
 .content-section-big {
+
+  padding: 6rem 3rem;
+
   app-section-header {
     margin-bottom: 5rem;
   }
