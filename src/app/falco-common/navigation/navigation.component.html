@@ -21,7 +21,7 @@
         </p>
       </address>
     </header>
-    <mat-toolbar role="navigation" aria-label="Menu" [@opaqueSolid]="isToggled ? 'solid' : 'opaque'" [ngClass]="isToggled? 'toggled' : ''">
+    <mat-toolbar role="navigation" aria-label="Menu" [@.disabled]="isRouteChanging" [@opaqueSolid]="isToggled ? 'solid' : 'opaque'" [ngClass]="isToggled? 'toggled' : ''">
       <button
         type="button"
         aria-label="Toggle sidenav"
