@@ -11,6 +11,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {RouterModule} from '@angular/router';
 import {FooterComponent} from './footer/footer.component';
 import {MatButtonModule} from '@angular/material/button';
+import {RoundImageComponent} from './round-image/round-image.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {MatButtonModule} from '@angular/material/button';
     NavigationComponent,
     HeaderComponent,
     SectionHeaderComponent,
-    FooterComponent
+    FooterComponent,
+    RoundImageComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +36,8 @@ import {MatButtonModule} from '@angular/material/button';
     NavigationComponent,
     HeaderComponent,
     SectionHeaderComponent,
-    FooterComponent
+    FooterComponent,
+    RoundImageComponent
   ]
 })
 export class FalcoCommonModule {

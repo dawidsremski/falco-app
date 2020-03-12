@@ -1,0 +1,20 @@
+#sawmill {
+  .sawmill-article {
+    max-width: calc(300px + 3rem);
+    text-align: justify;
+
+    app-round-image {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+#offer {
+  p {
+    text-align: justify;
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+}

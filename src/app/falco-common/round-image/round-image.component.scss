@@ -1,0 +1,21 @@
+:host {
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+  border-radius: 50%;
+  overflow: hidden;
+
+  .image {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    transition: .5s ease-in-out;
+    transform: scale(1);
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
