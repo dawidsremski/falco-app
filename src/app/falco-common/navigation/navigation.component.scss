@@ -2,7 +2,7 @@
 
 .mat-drawer-container {
   overflow: visible;
-  background-color: rgb(248, 248, 248);
+  background-color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -69,7 +69,7 @@ mat-sidenav {
   font-weight: 400;
 
   &.active {
-    background: #f8f8f8;
+    background: #fff;
     color: mat-color($falco-app-primary);
   }
 }
@@ -80,26 +80,38 @@ mat-sidenav {
   color: white;
 
   .mat-button {
-    &:hover {
-      position: relative;
-      background: none;
+
+    &:after {
+      position: absolute;
+      top: auto;
+      bottom: -6px;
+      left: 0;
+      transition: width .1s;
+      width: 0;
+      height: 6px;
+      background: mat-color($falco-app-accent);
+      content: "";
+    }
+
+    &.active {
+      background: #fff;
 
       &:after {
-        position: absolute;
-        top: auto;
-        bottom: -6px;
-        left: 0;
+        transition: none;
+      }
+    }
+
+    &:hover {
+      &:after {
+        transition: width .3s;
         width: 100%;
-        height: 6px;
-        background: mat-color($falco-app-accent);
-        content: "";
       }
 
       &.active {
-        background: #f8f8f8;
-
         &:after {
+          transition: none;
           background: mat-color($falco-app-primary);
+          width: 100%;
         }
       }
     }
@@ -126,7 +138,6 @@ mat-sidenav {
       }
     }
   }
-
 }
 
 .sidenav {
@@ -144,10 +155,6 @@ mat-sidenav {
   img {
     margin-right: 1rem;
   }
-}
-
-.blur {
-  filter: blur(5px);
 }
 
 address {

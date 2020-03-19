@@ -62,28 +62,17 @@ mat-divider {
 }
 
 #map {
-  position: relative;
+  padding-top: 62.5px;
+  min-height: auto;
 
-  figure {
-    margin: 0;
-    position: absolute;
-    top: 0;
-    transform: translateY(-50%);
-    height: 125px;
-    width: 125px;
-    background: #fff;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  @media all and (max-width: 600px) {
+    background-color: #f8f8f8;
   }
 
   .map-wrapper {
     border: 1px mat-color($falco-app-accent) solid;
-    height: 500px;
+    height: 600px;
     width: 100%;
-    margin-top: calc(63px - 3rem);
     padding: 1.5rem;
     box-sizing: border-box;
 

@@ -3,25 +3,19 @@
 header {
   top: -64px;
   overflow: hidden;
-  position: absolute;
-  background-image: url("../../../assets/forest_bg_2560.jpeg");
-  background-position: 100% 50%;
+  position: relative;
   background-size: cover;
 
-  .big {
+  &.big {
     min-height: 75vh;
   }
 
-  .bg {
-    position: absolute;
-    background-image: url("../../../assets/forest_bg_2560.jpeg");
-    background-position: 100% 50%;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    filter: blur(5px);
-    top: 0;
-    left: 0;
+  &.fixed {
+    background-attachment: fixed;
+
+    @supports (-webkit-overflow-scrolling: touch) {
+      background-attachment: scroll;
+    }
   }
 }
 

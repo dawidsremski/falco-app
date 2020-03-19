@@ -1,10 +1,11 @@
 <header fxLayout="row" fxLayoutAlign="center"
-        style="position: relative">
-  <div class="bg"></div>
-  <div class="header-overlay" fxLayout="row" fxFlex="100%" fxLayoutAlign="start"
-       [class.handset]="isHandset$ | async" [class.big]="big">
-    <div fxLayout="column" fxLayoutAlign="space-between">
-      <ng-content></ng-content>
-    </div>
+        [class.big]="big"
+        [class.fixed]="bgFixed"
+        [ngStyle]="{'background-image': 'url('+ bgUrl + ')', 'background-position': bgPos}">
+<div class="header-overlay" fxLayout="row" fxFlex="100%" fxLayoutAlign="start"
+     [class.handset]="isHandset$ | async">
+  <div fxLayout="column" fxLayoutAlign="space-between">
+    <ng-content></ng-content>
   </div>
+</div>
 </header>

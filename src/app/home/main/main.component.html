@@ -1,0 +1,161 @@
+<main fxLayout="column">
+  <section id="offer" class="section section-big" fxLayout="column"
+           fxLayoutAlign="center center">
+    <span id="offer-anchor"></span>
+    <app-section-header title="Nasza oferta" data-aos="fade-up">
+      Firma Falco oferuje szeroki wachlarz usług:
+    </app-section-header>
+    <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="center start"
+         fxLayoutAlign.lt-sm="center"
+         fxLayoutGap="5% grid" fxLayoutGap.lt-lg="10% grid">
+      <article fxFlex="30%" fxFlex.lt-lg="35%" fxFlex.lt-sm="100%">
+        <figure class="figure" fxLayout="column" fxLayoutAlign="center center" data-aos-anchor-placement="center-bottom"
+                data-aos="fade-right" data-aos-anchor="#icon-1">
+          <img src="assets/icons/saw.svg" alt="Pozyskanie">
+          <figcaption>
+            <h3 id="icon-1">Pozyskanie</h3>
+            <p class="offer-description">Pozyskujemu zarówno dla Lasów Państwowych jak tez innych odbiorców np.&nbsp;wycinka pod autostrady,
+              drogi szybkiego ruchu, linie brzegowe itp.</p>
+          </figcaption>
+        </figure>
+      </article>
+      <article fxFlex="30%" fxFlex.lt-lg="35%" fxFlex.lt-sm="100%">
+        <figure class="figure" fxLayout="column" fxLayoutAlign="center center" data-aos-anchor-placement="center-bottom"
+                data-aos="fade-up" data-aos-anchor="#icon-2">
+          <img src="assets/icons/truck.svg" alt="Zrywka">
+          <figcaption>
+            <h3 id="icon-2">Zrywka</h3>
+            <p class="offer-description">Wykonujemy zrywkę półpodwieszaną drewna wielkowymiarowego oraz zrywkę nasiębierną drewna stosowanego i&nbsp;kłodowanego.</p>
+          </figcaption>
+        </figure>
+      </article>
+      <article fxFlex="30%" fxFlex.lt-lg="35%" fxFlex.lt-sm="100%">
+        <figure class="figure" fxLayout="column" fxLayoutAlign="center center" data-aos-anchor-placement="center-bottom"
+                data-aos="fade-left" data-aos-anchor="#icon-3">
+          <img src="assets/icons/trees.svg" alt="Zagospodarowanie">
+          <figcaption>
+            <h3 id="icon-3">Zagospodarowanie</h3>
+            <p class="offer-description">Wykonujemy wszelkie prace związane z&nbsp;zagospodarowaniem takie jak przygotowanie gleby, zalesienia
+              oraz
+              odnowienia,
+              ochronę lasu, czyszczenie, trzebież i&nbsp;cięcie ręczne.</p>
+          </figcaption>
+        </figure>
+      </article>
+      <article fxFlex="30%" fxFlex.lt-lg="35%" fxFlex.lt-sm="100%">
+        <figure class="figure" fxLayout="column" fxLayoutAlign="center center" data-aos-anchor-placement="center-bottom"
+                data-aos="fade-up" data-aos-anchor="#icon-4">
+          <img src="assets/icons/circular_saw.svg" alt="Tartak">
+          <figcaption>
+            <h3 id="icon-4">Tartak</h3>
+            <p class="offer-description">Posiadamy tartak oferujący szeroką gamę wyrobów tartacznych, takich jak tarcica nieobrzynana,
+              obrzynana, drewno opałowe oraz konstrukcje więźb dachowych.</p>
+          </figcaption>
+        </figure>
+      </article>
+      <article fxFlex="30%" fxFlex.lt-lg="35%" fxFlex.lt-sm="100%">
+        <figure class="figure" fxLayout="column" fxLayoutAlign="center center" data-aos-anchor-placement="center-bottom"
+                data-aos="fade-up" data-aos-anchor="#icon-5">
+          <img src="assets/icons/deer.svg" alt="Łowiectwo">
+          <figcaption>
+            <h3 id="icon-5">Łowiectwo</h3>
+            <p class="offer-description">Oferujemy usługi dla łowiectwa takie jak utrzymanie poletek łowieckich, dokarmianie zwierzyny, budowa infrastruktury łowieckiej.</p>
+          </figcaption>
+        </figure>
+      </article>
+    </div>
+  </section>
+  <section id="ecology" fxLayout="row" fxLayout.lt-md="column">
+    <div class="section forest" fxLayout="column" fxFlex="50%" fxFlex.lt-md="100%"
+         fxLayoutAlign="center center" appIntersectionObserver (visibilityChange)="onVisibilityChange('ecology',$event)"
+         [class.bg]="visibilityStatus['ecology'] === intersectionStatus.Visible">
+    </div>
+    <div class="section section-big gray-bg" fxLayout="column" fxFlex="50%" fxFlex.lt-md="100%"
+         fxLayoutAlign="center center">
+      <figure class="icon-header">
+        <img src="assets/icons/trees2_nc.svg" alt="Las" data-aos="zoom-in" data-aos-anchor-placement="center-bottom">
+      </figure>
+      <app-section-header title="Ekologia" data-aos="fade-up">
+        Działając na rzecz ekologii wspieramy zrównoważoną gospodarkę leśną:
+      </app-section-header>
+      <div class="section-content">
+        <p data-aos="fade-left">
+          Nasze drewno pozyskujemy w&nbsp;sposób świadomy i&nbsp;odpowiedzialny dbając o&nbsp;lasy na każdym etapie
+          pozyskiwania i&nbsp;przetwarzania surowca. Prowadzimy zbilansowaną gospodarkę, pozyskując drewno w&nbsp;sposób
+          nienaruszający naturalnej równowagi ekosystemu. Posiadamy certyfikaty <strong>PEFC</strong> oraz
+          <strong>FSC</strong> zaświadczające o&nbsp;pochodzeniu naszego drewna z&nbsp;lasów zarządzanych w&nbsp;odpowiedzialny
+          sposób.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="sawmill" class="section section-big white-bg" fxLayout="column"
+           fxLayoutAlign="center center">
+    <figure class="icon-header">
+      <img src="assets/icons/circular_saw_nc.svg" alt="Tartak" data-aos="zoom-in"
+           data-aos-anchor-placement="center-bottom">
+    </figure>
+    <app-section-header title="Tartak" data-aos="fade-up">
+      Falco posiada wyspecjalizowany tartak zajmuący się obróbką pozyskanego przez nas drewna:
+    </app-section-header>
+    <div class="section-content">
+      <div fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="3rem grid">
+        <div class="sawmill-article" fxLayout="column" fxLayoutAlign="start center" data-aos="fade-right">
+          <app-round-image bgUrl="assets/sawmill_1.jpg" size="250px"></app-round-image>
+        </div>
+        <div class="sawmill-article" fxLayout="column" fxLayoutAlign="start center" data-aos="fade-up">
+          <app-round-image bgUrl="assets/sawmill_4.jpg" size="250px"></app-round-image>
+        </div>
+        <div class="sawmill-article" fxLayout="column" fxLayoutAlign="start center" data-aos="fade-left">
+          <app-round-image bgUrl="assets/sawmill_5.jpg" size="250px"></app-round-image>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center">
+        <button mat-flat-button color="accent" class="mat-flat-button mat-button-base mat-accent"
+                routerLink="/tartak" data-aos="zoom-in">Czytaj więcej
+        </button>
+      </div>
+    </div>
+  </section>
+  <section id="counters" class="section section-big gray-bg" fxLayout="column"
+           fxLayoutAlign="center center">
+    <figure class="icon-header">
+      <img src="assets/icons/harvester_nc.svg" alt="Pojazd" data-aos="zoom-in"
+           data-aos-anchor-placement="center-bottom">
+    </figure>
+    <div class="section-content" appIntersectionObserver (visibilityChange)="onVisibilityChange('counter',$event)">
+      <app-section-header title="W liczbach" data-aos="fade-up">
+        Posiadamy rozbudowany park maszyn oraz wykwalifikowane zasoby kadrowe:
+      </app-section-header>
+      <ngx-loadable [module]="'counter'" [show]="visibilityStatus['counter'] === intersectionStatus.Visible"
+                    (init)="lazyInit($event)"></ngx-loadable>
+    </div>
+  </section>
+  <section id="quotation" appIntersectionObserver (visibilityChange)="onVisibilityChange('quotation',$event)"
+           [class.bg]="visibilityStatus['quotation'] === intersectionStatus.Visible">
+    <div class="content" fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="center start"
+         fxLayoutAlign.lt-sm="center"
+         fxLayoutGap.gt-xs="10%">
+      <article fxFlex="75%" fxFlex.lt-md="100%">
+        <p data-aos-anchor-placement="top-bottom"
+           data-aos="fade-up" data-aos-duration="1500">"Naszą największą wartość stanowią ludzie, to im nasza firma
+          zawdzięcza swój sukces. Od zawsze doceniamy ich zaangażowanie oraz stale podnosimy kwalifikacje."
+          <br>
+          <br>~Henryk&nbsp;Słowikowski, właściciel</p>
+      </article>
+    </div>
+  </section>
+  <section id="partners" class="section" fxLayout="column" fxLayoutAlign="center center">
+    <app-section-header title="Zaufali nam">
+      Z naszych usług korzystają renomowane firmy oraz organizacje takie jak:
+    </app-section-header>
+    <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="center center" fxLayoutGap="3rem" data-aos="fade-up">
+      <img src="assets/partners/lp_logo.svg" style="height: 6rem" alt="Lasy Państwowe">
+      <img src="assets/partners/velux_logo.svg" style="height: 2rem" alt="Velux">
+    </div>
+  </section>
+  <section id="map" class="gray-bg" appIntersectionObserver (visibilityChange)="onVisibilityChange('map',$event)">
+    <ngx-loadable [module]="'map'" [show]="visibilityStatus['map'] === intersectionStatus.Visible"
+                  (init)="lazyInit($event)"></ngx-loadable>
+  </section>
+</main>

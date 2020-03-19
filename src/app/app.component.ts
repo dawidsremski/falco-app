@@ -1,11 +1,12 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import * as WebFont from 'webfontloader';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'falco-app';
   menuItems = [
     {
@@ -29,4 +30,12 @@ export class AppComponent {
       link: '/kontakt'
     },
   ];
+
+  ngOnInit(): void {
+    WebFont.load({
+      google: {
+        families: ['Montserrat:200:latin-ext', 'Open Sans:200,300,400:latin-ext', 'Material Icons']
+      }
+    });
+  }
 }

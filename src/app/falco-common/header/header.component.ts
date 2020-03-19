@@ -12,6 +12,9 @@ import {map, shareReplay} from 'rxjs/operators';
 export class HeaderComponent implements OnInit {
 
   @Input() big = false;
+  @Input() bgUrl = 'assets/forest_bg_2560.jpeg';
+  @Input() bgPos = '100% 50%';
+  @Input() bgFixed = false;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(

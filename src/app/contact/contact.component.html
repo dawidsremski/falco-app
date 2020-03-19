@@ -1,137 +1,122 @@
 <app-header>
   <h1 class="page-title">Kontakt</h1>
 </app-header>
-<div fxLayout="row" fxLayout.lt-sm="column" style="margin-top: -64px">
-  <section class="content-section" fxLayout="column" fxFlex="50%" fxLayoutAlign="start">
-    <app-section-header title="Kontakt">
-      Reprezentanci oraz dane adresowe:
-    </app-section-header>
-    <address fxLayout="column">
-      <p>
-        <strong>ZPHU Falco Henryk Słowikowski</strong>
-        <br>
-        <br><b>NIP:</b>&emsp;745-13-31-010
-        <br><b>REGON:</b>&emsp;510476328
-      </p>
-      <p>
-        <mat-icon>phone</mat-icon> (+48) 89 621 33 18
-        <br><mat-icon>mail_outline</mat-icon> <a href="mailto: biuro@falcojedwabno.pl">biuro@falcojedwabno.pl</a>
-      </p>
-      <div fxLayout="row" fxLayout.lt-md="column">
-        <div fxLayout="column" fxFlex="50%">
-          <p>
-            <b>Właściciel:</b>
-            <br>Henryk Słowikowski
-            <br>
-            <br><mat-icon>mail_outline</mat-icon> <a href="mailto: hs@falcojedwabno.pl">hs@falcojedwabno.pl</a>
-          </p>
+<main>
+  <div fxLayout="row" fxLayout.lt-sm="column">
+    <section class="section gray-bg" fxLayout="column" fxFlex="50%" fxLayoutAlign="start">
+      <app-section-header title="Kontakt">
+        Reprezentanci oraz dane adresowe:
+      </app-section-header>
+      <address fxLayout="column">
+        <p>
+          <strong>ZPHU Falco Henryk Słowikowski</strong>
+          <br>
+          <br><b>NIP:</b>&emsp;745-13-31-010
+          <br><b>REGON:</b>&emsp;510476328
+        </p>
+        <p>
+          <mat-icon>phone</mat-icon>
+          (+48) 89 621 33 18
+          <br>
+          <mat-icon>mail_outline</mat-icon>
+          <a href="mailto: biuro@falcojedwabno.pl">biuro@falcojedwabno.pl</a>
+        </p>
+        <div fxLayout="row" fxLayout.lt-md="column">
+          <div fxLayout="column" fxFlex="50%">
+            <p>
+              <b>Właściciel:</b>
+              <br>Henryk Słowikowski
+              <br>
+              <br>
+              <mat-icon>mail_outline</mat-icon>
+              <a href="mailto: hs@falcojedwabno.pl">hs@falcojedwabno.pl</a>
+            </p>
+          </div>
+          <div fxLayout="column" fxFlex="50%">
+            <p>
+              <b>Pełnomocnik:</b>
+              <br>Wioletta Ważna
+            </p>
+          </div>
         </div>
-        <div fxLayout="column" fxFlex="50%">
-          <p>
-            <b>Pełnomocnik:</b>
-            <br>Wioletta Ważna
-          </p>
+        <mat-divider></mat-divider>
+        <p><b>Dane adresowe:</b></p>
+        <div fxLayout="row" fxLayout.lt-md="column">
+          <div fxLayout="column" fxFlex="50%">
+            <p><b>Siedziba:</b>
+              <br>ul. Olsztyńska 11F
+              <br>12-122 Jedwabno
+            </p>
+          </div>
+          <div fxLayout="column" fxFlex="50%">
+            <p><b>Tartak:</b>
+              <br>Trelkówko 13
+              <br>12-100 Szczytno
+            </p>
+          </div>
+        </div>
+      </address>
+    </section>
+    <section id="departments" class="section" fxLayout="column" fxFlex="50%"
+             fxLayoutAlign="center center">
+      <app-section-header title="Działy">
+        Przedstawiciele oraz kontakt z&nbsp;poszczegolnymi działami:
+      </app-section-header>
+      <div fxLayout="row" fxLayoutAlign="center">
+        <div fxLayout="column">
+          <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="3rem grid">
+            <div class="department" fxLayout="column" fxLayoutAlign="start center">
+              <h3>Sekretariat</h3>
+              <figure fxLayout="column" fxLayoutAlign="center center">
+                <mat-icon>person</mat-icon>
+              </figure>
+              <p><b>Milena Maciejczuk</b></p>
+              <a href="mailot:sekretariat@falcojedwabno.pl">sekretariat@falcojedwabno.pl</a>
+            </div>
+            <div class="department" fxLayout="column" fxLayoutAlign="start center">
+              <h3>Księgowość</h3>
+              <figure fxLayout="column" fxLayoutAlign="center center">
+                <mat-icon>person</mat-icon>
+              </figure>
+              <p><b>Wioletta Ważna</b></p>
+              <a href="mailot:ksiegowosc@falcojedwabno.pl">ksiegowosc@falcojedwabno.pl</a>
+            </div>
+            <div class="department" fxLayout="column" fxLayoutAlign="start center">
+              <h3>Kadry</h3>
+              <figure fxLayout="column" fxLayoutAlign="center center">
+                <mat-icon>person</mat-icon>
+              </figure>
+              <p><b>Anna Zajkowska</b></p>
+              <a href="mailot:kadry@falcojedwabno.pl">kadry@falcojedwabno.pl</a>
+            </div>
+            <div class="department" fxLayout="column" fxLayoutAlign="start center">
+              <h3>Warsztat</h3>
+              <figure fxLayout="column" fxLayoutAlign="center center">
+                <mat-icon>person</mat-icon>
+              </figure>
+              <p><b>Grzegorz Laskowski</b></p>
+              <a href="mailot:techniczny@falcojedwabno.pl">techniczny@falcojedwabno.pl</a>
+            </div>
+            <div class="department" fxLayout="column" fxLayoutAlign="start center">
+              <h3>Koordynacja i&nbsp;obsługa kontraktów</h3>
+              <figure fxLayout="column" fxLayoutAlign="center center">
+                <mat-icon>person</mat-icon>
+              </figure>
+              <p><b>Tomasz Stojanowski</b></p>
+              <a href="mailot:tstojanowski@falcojedwabno.pl">tstojanowski@falcojedwabno.pl</a>
+            </div>
+          </div>
         </div>
       </div>
-      <mat-divider></mat-divider>
-      <p><b>Dane adresowe:</b></p>
-      <div fxLayout="row" fxLayout.lt-md="column">
-        <div fxLayout="column" fxFlex="50%">
-          <p><b>Siedziba:</b>
-            <br>ul. Olsztyńska 11F
-            <br>12-122 Jedwabno
-          </p>
-        </div>
-        <div fxLayout="column" fxFlex="50%">
-          <p><b>Tartak:</b>
-            <br>Trelkówko 13
-            <br>12-100 Szczytno
-          </p>
-        </div>
-      </div>
-    </address>
-  </section>
-  <section id="departments" class="content-section white-bg" fxLayout="column" fxFlex="50%"
-           fxLayoutAlign="center center">
-    <app-section-header title="Działy">
-      Przedstawiciele oraz kontakt z&nbsp;poszczegolnymi działami:
-    </app-section-header>
-    <div fxLayout="row" fxLayoutAlign="center">
-      <div fxLayout="column">
-        <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="3rem grid">
-          <div class="department" fxLayout="column" fxLayoutAlign="start center">
-            <h3>Sekretariat</h3>
-            <figure fxLayout="column" fxLayoutAlign="center center">
-              <mat-icon>person</mat-icon>
-            </figure>
-            <p><b>Milena Maciejczuk</b></p>
-            <a href="mailot:sekretariat@falcojedwabno.pl">sekretariat@falcojedwabno.pl</a>
-          </div>
-          <div class="department" fxLayout="column" fxLayoutAlign="start center">
-            <h3>Księgowość</h3>
-            <figure fxLayout="column" fxLayoutAlign="center center">
-              <mat-icon>person</mat-icon>
-            </figure>
-            <p><b>Wioletta Ważna</b></p>
-            <a href="mailot:ksiegowosc@falcojedwabno.pl">ksiegowosc@falcojedwabno.pl</a>
-          </div>
-          <div class="department" fxLayout="column" fxLayoutAlign="start center">
-            <h3>Kadry</h3>
-            <figure fxLayout="column" fxLayoutAlign="center center">
-              <mat-icon>person</mat-icon>
-            </figure>
-            <p><b>Anna Zajkowska</b></p>
-            <a href="mailot:kadry@falcojedwabno.pl">kadry@falcojedwabno.pl</a>
-          </div>
-          <div class="department" fxLayout="column" fxLayoutAlign="start center">
-            <h3>Warsztat</h3>
-            <figure fxLayout="column" fxLayoutAlign="center center">
-              <mat-icon>person</mat-icon>
-            </figure>
-            <p><b>Grzegorz Laskowski</b></p>
-            <a href="mailot:techniczny@falcojedwabno.pl">techniczny@falcojedwabno.pl</a>
-          </div>
-          <div class="department" fxLayout="column" fxLayoutAlign="start center">
-            <h3>Koordynacja i&nbsp;obsługa kontraktów</h3>
-            <figure fxLayout="column" fxLayoutAlign="center center">
-              <mat-icon>person</mat-icon>
-            </figure>
-            <p><b>Tomasz Stojanowski</b></p>
-            <a href="mailot:tstojanowski@falcojedwabno.pl">tstojanowski@falcojedwabno.pl</a>
-          </div>
-        </div>
-      </div>
+    </section>
+  </div>
+  <section id="map" class="section">
+    <figure class="icon-header">
+      <img src="assets/icons/map_nc.svg" alt="Mapa" data-aos="zoom-in" data-aos-anchor-placement="center-bottom">
+    </figure>
+    <div class="map-wrapper" appIntersectionObserver (visibilityChange)="onVisibilityChange('map', $event)">
+      <ngx-loadable [module]="'map'" [show]="visibilityStatus['map'] === intersectionStatus.Visible"
+                    (init)="lazyInit($event)"></ngx-loadable>
     </div>
   </section>
-</div>
-<section id="map" class="content-section white-bg" fxLayout="column"
-         fxLayoutAlign="start center">
-  <figure>
-    <img src="assets/icons/map_nc.svg" alt="Mapa">
-  </figure>
-  <div class="map-wrapper">
-    <agm-map [latitude]="53.596115" [longitude]="20.831776" [zoom]="10" [scrollwheel]="false"
-             [usePanning]="true" [streetViewControl]="false" [minZoom]="8" [maxZoom]="19" [styles]="[
-          {
-            featureType: 'poi.business',
-            stylers: [{visibility: 'off'}]
-            }]">
-      <agm-marker [latitude]="53.526871" [longitude]="20.717799">
-        <agm-info-window [isOpen]="true">
-          <strong>ZPHU Falco Henryk Słowikowski</strong>
-          <br>ul. Olsztyńska 11F
-          <br>12-122 Jedwabno
-          <br>Polska
-        </agm-info-window>
-      </agm-marker>
-      <agm-marker [latitude]="53.625720" [longitude]="20.954515">
-        <agm-info-window [isOpen]="true">
-          <strong>Tartak</strong>
-          <br>Trelkówko 13
-          <br>12-100 Szczytno
-          <br>Polska
-        </agm-info-window>
-      </agm-marker>
-    </agm-map>
-  </div>
-</section>
+</main>

@@ -1,0 +1,12 @@
+<agm-map [latitude]="config.latitude" [longitude]="config.longitude" [zoom]="config.zoom" [scrollwheel]="false"
+         [usePanning]="true" [streetViewControl]="false" [minZoom]="config.minZoom" [maxZoom]="config.maxZoom"
+         [styles]="[{featureType: 'poi.business', stylers: [{visibility: 'off'}]}]" [style.height]="height">
+
+  <agm-marker *ngFor="let marker of markers" [latitude]="marker.latitude" [longitude]="marker.longitude">
+    <agm-info-window [isOpen]="true">
+      <p class="marker-description">
+        {{marker.description}}
+      </p>
+    </agm-info-window>
+  </agm-marker>
+</agm-map>

@@ -8,6 +8,7 @@ import {AgmCoreModule} from '@agm/core';
 import {FalcoCommonModule} from '../falco-common/falco-common.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatDividerModule} from '@angular/material/divider';
+import {LoadableModule} from 'ngx-loadable';
 
 
 @NgModule({
@@ -21,7 +22,11 @@ import {MatDividerModule} from '@angular/material/divider';
     AgmCoreModule,
     FalcoCommonModule,
     FlexLayoutModule,
-    MatDividerModule
+    MatDividerModule,
+    LoadableModule
+  ],
+  bootstrap: [
+    ContactComponent
   ]
 })
 export class ContactModule {

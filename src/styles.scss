@@ -38,7 +38,11 @@ body {
   margin: 0;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
-  background-color: #f8f8f8;
+}
+
+main {
+  margin-top: -64px;
+  overflow: hidden;
 }
 
 address {
@@ -56,12 +60,14 @@ h2 {
   font-size: 2rem;
   font-weight: 400;
   text-transform: uppercase;
+  text-align: center;
 }
 
 h3 {
   font-size: 1.1rem;
   font-weight: 400;
   text-transform: uppercase;
+  text-align: center;
 }
 
 ::selection {
@@ -82,11 +88,12 @@ h3 {
 
 .header-overlay {
   .page-title {
+    text-align: right;
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
     font-size: 2.5rem;
     letter-spacing: -.02em;
-    margin: 1rem;
+    margin: 3rem 1rem;
     line-height: 1;
   }
 
@@ -104,39 +111,71 @@ h3 {
   }
 }
 
-.content-section {
+.section {
   padding: 3rem;
   min-height: 75vh;
+  position: relative;
+  background-color: #fff;
 
   @media all and (max-width: 600px) {
     padding: 3rem 1.5rem;
   }
 
-  app-section-header {
+  .section-header {
     margin-bottom: 4rem;
   }
 
   p {
     margin-top: 0;
     font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .section-content {
+    width: 100%;
+
+    p {
+      line-height: 2;
+    }
+  }
+
+  .icon-header-anchor {
+    position: absolute;
+    top: calc(62.5px + 64px);
+  }
+
+  .icon-header {
+    background: inherit;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
-.content-section-big {
+.section-big {
+  padding: 7rem 3rem;
 
-  padding: 6rem 3rem;
-
-  app-section-header {
-    margin-bottom: 5rem;
+  @media all and (max-width: 600px) {
+    padding: 7rem 1.5rem;
   }
 }
 
-.white-bg {
-  background-color: #ffffff;
+.gray-bg {
+  background-color: #f8f8f8;
 }
 
-.mat-button, .mat-flat-button, .mat-icon-button, .mat-stroked-button, .mat-card {
+.mat-button, .mat-flat-button {
   border-radius: 0 !important;
+  padding: .25rem 2rem !important;
 }
 
 //Google Maps

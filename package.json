@@ -26,8 +26,10 @@
     "aos": "^2.3.4",
     "material-design-icons": "^3.0.1",
     "ngx-cookie-service": "^2.4.0",
+    "ngx-loadable": "^2.1.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
+    "webfontloader": "^1.6.28",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {

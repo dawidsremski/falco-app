@@ -6,6 +6,7 @@ figure {
   margin: 0;
   border-radius: 50%;
   overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 
   .image {
     height: 100%;

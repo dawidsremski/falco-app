@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 #sawmill {
   .sawmill-article {
     max-width: calc(300px + 3rem);
@@ -10,6 +12,13 @@
 }
 
 #offer {
+  .planks-background {
+    background-color: mat-color($falco-app-primary);
+    background-image: url("../../assets/planks_1280.jpeg");
+    background-size: cover;
+    background-position: 100% 100%;
+  }
+
   p {
     text-align: justify;
   }

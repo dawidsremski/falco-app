@@ -1,28 +1,14 @@
-<footer fxLayout="row" fxLayout.lt-md="col" fxLayoutAlign="space-between">
-  <div fxLayout="col" fxFlex="15%">
+<footer fxLayout="row" fxLayoutAlign="space-between">
+  <div fxLayout="col" fxFlex="50%" fxLayoutAlign="start start">
     <p>ZPHU Falco Henryk Słowikowski
       <br>NIP 7451331010, REGON 510476328
       <br>ul. Olsztyńska 11F, 12-122 Jedwabno
     </p>
   </div>
-  <div fxLayout="col" fxFlex="50%" fxLayoutAlign="center center">
-    <div class="section-header" fxLayout="column" fxLayoutAlign="center center">
-      <div class="section-header-content">
-        <p class="primary-text">Copyright&nbsp;©&nbsp;2020&nbsp;<a href="http://www.codeve.pl/">Codeve</a></p>
-        <p class="secondary-text">All&nbsp;rights&nbsp;reserved.</p>
-      </div>
-    </div>
-  </div>
-  <div fxLayout="col">
-    <mat-divider [vertical]="true"></mat-divider>
-    <mat-nav-list>
-      <mat-list>
-        <mat-list-item mat-button *ngFor="let item of menuItems"
-                       routerLink="{{item.link}}"
-                       [class.active]="this.router.url === item.link">
-          {{item.title}}
-        </mat-list-item>
-      </mat-list>
-    </mat-nav-list>
-  </div>
+  <address class="copyrights" fxLayout="column" fxFlex="50%" fxLayoutAlign="start end">
+    <p>Copyright&nbsp;©&nbsp;2020&nbsp;Codeve
+      <br><a href="http://www.codeve.pl/">www.codeve.pl</a>
+      <br>All&nbsp;rights&nbsp;reserved.
+    </p>
+  </address>
 </footer>

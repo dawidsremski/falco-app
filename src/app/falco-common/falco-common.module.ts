@@ -12,6 +12,10 @@ import {RouterModule} from '@angular/router';
 import {FooterComponent} from './footer/footer.component';
 import {MatButtonModule} from '@angular/material/button';
 import {RoundImageComponent} from './round-image/round-image.component';
+import {LoadingSpinnerComponent} from './loading-spinner/loading-spinner.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {IntersectionObserverDirective} from './intersection-observer/intersection-observer.directive';
+import {CookieSnackbarComponent} from './cookie-snackbar/cookie-snackbar.component';
 
 
 @NgModule({
@@ -20,7 +24,10 @@ import {RoundImageComponent} from './round-image/round-image.component';
     HeaderComponent,
     SectionHeaderComponent,
     FooterComponent,
-    RoundImageComponent
+    RoundImageComponent,
+    LoadingSpinnerComponent,
+    IntersectionObserverDirective,
+    CookieSnackbarComponent
   ],
   imports: [
     CommonModule,
@@ -30,14 +37,19 @@ import {RoundImageComponent} from './round-image/round-image.component';
     MatListModule,
     MatIconModule,
     RouterModule,
-    MatButtonModule
+    MatButtonModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     NavigationComponent,
     HeaderComponent,
     SectionHeaderComponent,
     FooterComponent,
-    RoundImageComponent
+    RoundImageComponent,
+    LoadingSpinnerComponent,
+    IntersectionObserverDirective,
+    IntersectionObserverDirective,
+    CookieSnackbarComponent
   ]
 })
 export class FalcoCommonModule {

@@ -1,0 +1,147 @@
+@import "../../../variables.scss";
+
+main {
+  overflow: hidden;
+}
+
+.figure {
+  margin: 0 0 2rem 0;
+
+  figcaption {
+    text-align: center;
+
+    .header {
+      font-size: 1.5rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+article:last-child {
+  .figure {
+    margin: 0;
+  }
+}
+
+mat-card-title {
+  margin-left: -16px;
+}
+
+.outlined-white {
+  background: rgba(0, 0, 0, .05);
+  border: 1px solid #fff;
+  color: #fff
+}
+
+#offer {
+  #offer-anchor {
+    position: absolute;
+    top: 0;
+  }
+
+  img {
+    width: 100px;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 1.5rem;
+  }
+
+  .offer-description {
+    font-size: .9rem;
+    line-height: 1.5;
+    max-width: 250px;
+  }
+}
+
+#sawmill {
+  .sawmill-article {
+    max-width: calc(300px + 3rem);
+    text-align: justify;
+
+    app-round-image {
+      margin-bottom: 1rem;
+    }
+  }
+
+  button {
+    margin: 3rem 0 2rem 0;
+  }
+}
+
+#ecology {
+  .forest {
+    background-color: mat-color($falco-app-primary);
+
+    &.bg {
+      background-image: url('../../../assets/forest_1280.jpeg');
+      background-size: cover;
+      background-position: 100% 100%;
+    }
+  }
+}
+
+.webp {
+  #quotation {
+    &.bg {
+      background-image: url("../../../assets/forest_2_bg_2560.webp");
+    }
+  }
+}
+
+.no-webp {
+  #quotation {
+    &.bg {
+      background-image: url("../../../assets/forest_2_bg_2560.jpeg");
+    }
+  }
+}
+
+#quotation {
+
+  &.bg {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 100%;
+  }
+
+  .content {
+    padding: 8rem 1.5rem;
+    background-color: rgba(255, 255, 255, .9);
+
+    p {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: 200;
+      font-family: "Montserrat", sans-serif;
+      line-height: 1.5;
+      position: relative;
+    }
+
+    @media all and (max-width: 600px) {
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+#partners {
+  padding: 5rem 1.5rem;
+  background-color: #fff;
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  #quotation {
+    background-attachment: scroll;
+  }
+}
+
+#map {
+  height: 600px;
+}

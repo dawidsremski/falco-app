@@ -1,0 +1,8 @@
+.marker-description {
+  margin: 0;
+  white-space: pre-line;
+
+  &:first-line {
+      font-weight: bold;
+   }
+}

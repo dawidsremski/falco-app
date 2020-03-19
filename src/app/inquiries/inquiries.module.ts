@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { InquiriesRoutingModule } from './inquiries-routing.module';
-import { InquiriesComponent } from './inquiries.component';
+import {InquiriesRoutingModule} from './inquiries-routing.module';
+import {InquiriesComponent} from './inquiries.component';
 import {FalcoCommonModule} from '../falco-common/falco-common.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
@@ -14,6 +14,10 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     InquiriesRoutingModule,
     FalcoCommonModule,
     FlexLayoutModule
+  ],
+  bootstrap: [
+    InquiriesComponent
   ]
 })
-export class InquiriesModule { }
+export class InquiriesModule {
+}

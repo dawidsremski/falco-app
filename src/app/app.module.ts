@@ -4,37 +4,41 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {HomeComponent} from './pages/home/home.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {MainComponent} from './pages/home/main/main.component';
-import {MissingPageComponent} from './pages/missing-page/missing-page.component';
-import {CounterComponent} from './counter/counter.component';
-import {AgmCoreModule} from '@agm/core';
-import {CookieSnackbarComponent} from './cookie-snackbar/cookie-snackbar.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {FalcoCommonModule} from './falco-common/falco-common.module';
+import {LoadableModule, matcher} from 'ngx-loadable';
+import {LoadingSpinnerComponent} from './falco-common/loading-spinner/loading-spinner.component';
+import {HomeModule} from './home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    MainComponent,
-    MissingPageComponent,
-    CounterComponent,
-    CookieSnackbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAFC9h0XBTsS4xsYJA4dy05YeiK9OqA80Q'
-    }),
     MatIconModule,
     FlexLayoutModule,
     MatButtonModule,
-    FalcoCommonModule
+    HomeModule,
+    FalcoCommonModule,
+    LoadableModule.forRoot({
+      moduleConfigs: [
+        {
+          name: 'map', loadChildren: () => import('./map/map.module').then(m => m.MapModule),
+          loadingComponent: LoadingSpinnerComponent,
+          matcher
+        },
+        {
+          name: 'counter', loadChildren: () => import('./home/counter/counter.module').then(m => m.CounterModule),
+          loadingComponent: LoadingSpinnerComponent,
+          matcher
+        }
+      ]
+    })
   ],
   bootstrap: [AppComponent]
 })

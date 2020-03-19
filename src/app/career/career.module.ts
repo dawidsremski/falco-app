@@ -14,6 +14,9 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     CareerRoutingModule,
     FalcoCommonModule,
     FlexLayoutModule
+  ],
+  bootstrap: [
+    CareerComponent
   ]
 })
 export class CareerModule { }

@@ -1,0 +1,71 @@
+@import "../../variables.scss";
+
+.main-header {
+  min-height: 100%;
+}
+
+.home-header {
+  padding: 4rem 3rem 3.5rem 3rem;
+
+  h1 {
+    margin: 0;
+  }
+
+  .secondary-text {
+    margin: 1.5rem 0 0 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    font-weight: 200;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  button {
+    display: table;
+    width: fit-content;
+    margin-top: 1.5rem;
+  }
+
+  @media all and (max-width: 599px) {
+    padding: 2rem 0 2rem 0;
+
+    .secondary-text {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.header-picture {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: none;
+  border: 1px solid mat-color($falco-app-accent);
+
+  @media all and (max-width: 959px) and (min-width: 600px) {
+    margin: 0 3rem 4rem 3rem;
+  }
+
+  .header-picture-wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+
+    figure {
+      width: 100%;
+      height: 100%;
+      flex-grow: 1;
+      margin: 0;
+      background-image: url('../../assets/harvester_1024.jpg');
+      background-size: cover;
+      background-position: 50% 50%;
+      transform: scale(1);
+      transition: all 5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

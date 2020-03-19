@@ -1,46 +1,63 @@
-<app-header>
+<app-header bgUrl="assets/planks_bg_2560.jpeg">
   <h1 class="page-title">Tartak</h1>
 </app-header>
-<div fxLayout="column" style="margin-top: -64px" fxLayoutAlign="start">
-  <section id="sawmill" class="content-section content-section-big" fxLayout="column"
+<main fxLayout="column" style="margin-top: -64px" fxLayoutAlign="start">
+  <section id="sawmill" class="section section-big gray-bg" fxLayout="column"
            fxLayoutAlign="center center">
     <app-section-header title="Tartak">
       Falco posiada wyspecjalizowany tartak zajmuący się obróbką pozyskanego przez nas drewna:
     </app-section-header>
     <div fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="3rem grid">
       <div class="sawmill-article" fxLayout="column" fxLayoutAlign="start center">
-        <app-round-image bgUrl="assets/photos/sawmill/IMG_1546.jpg" size="250px"></app-round-image>
-        <h3>Surowiec</h3>
-        <p>Wysokiej jakości drewno do naszego tartaku pozyskujemy samodzielnie. Posiadamy certyfikaty PEFC oraz FSC
-          gwarantujące, że stosowane przez nas drewno pochodzi z&nbsp;legalnych źródeł.</p>
+        <app-round-image bgUrl="assets/sawmill_1.jpg" size="250px"></app-round-image>
+        <div data-aos="fade-up">
+          <h3>Surowiec</h3>
+          <p>Wysokiej jakości drewno do naszego tartaku pozyskujemy samodzielnie. Posiadamy certyfikaty PEFC oraz FSC
+            gwarantujące, że stosowane przez nas drewno pochodzi z&nbsp;legalnych źródeł.</p>
+        </div>
       </div>
       <div class="sawmill-article" fxLayout="column" fxLayoutAlign="start center">
-        <app-round-image bgUrl="assets/photos/sawmill/DSC03677_cropped.JPG" size="250px"></app-round-image>
-        <h3>Traki</h3>
-        <p>Posiadamy dwa traki do przecierania drewna okrągłego. W&nbsp;wyniku przetarcia
-          otrzymujemy tarcicę nieobrzynaną do wykorzystania lub daleszej obróbki technologicznej.</p>
+        <app-round-image bgUrl="assets/sawmill_2.jpg" size="250px"></app-round-image>
+        <div data-aos="fade-up">
+          <h3>Traki</h3>
+          <p>Posiadamy dwa traki do przecierania drewna okrągłego. W&nbsp;wyniku przetarcia
+            otrzymujemy tarcicę nieobrzynaną do wykorzystania lub daleszej obróbki technologicznej.</p>
+        </div>
       </div>
       <div class="sawmill-article" fxLayout="column" fxLayoutAlign="start center">
-        <app-round-image bgUrl="assets/photos/sawmill/DSC03699_cropped.JPG" size="250px"></app-round-image>
-        <h3>Wielopiły</h3>
-        <p>Dzięki zaawansowanym wielopiłom do rozkroju, cięcia drewna, wycinania desek i&nbsp;listew możemy
-          zaoferować precyzyjnie przycięty asortyment o&nbsp;powtarzanlych wymiarach.</p>
+        <app-round-image bgUrl="assets/sawmill_3.jpg" size="250px"></app-round-image>
+        <div data-aos="fade-up">
+          <h3>Wielopiły</h3>
+          <p>Dzięki zaawansowanym wielopiłom do rozkroju, cięcia drewna, wycinania desek i&nbsp;listew
+            możemy
+            zaoferować precyzyjnie przycięty asortyment o&nbsp;powtarzanlych wymiarach.</p>
+        </div>
       </div>
     </div>
   </section>
-  <section id="offer" class="content-section content-section-big white-bg">
-    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="center center" fxLayoutGap="3rem">
-      <div fxLayout="column" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutAlign="center center" fxFlexFill>
-        <h3>Szeroki asortyment</h3>
-        <p>Oferujemy szeroki asortyment naszych produktów takich jak tarcica obrzynana oraz nieobrzynana, drewno
-          konstrukcyjne i opałowe. Na zamówienie przygotowujemy kompleksowe konstrukcje więźb dachowych z wysokiej
-          jakości drewna. Jesteśmy otwarci na Państwa potrzeby, nasz wykwalifikowany personel z chęcią udzieli Państwu
-          informacji w celu dostarczenia produktu spełniającego Państwa potrzeby.</p>
-        <button mat-flat-button color="accent" class="mat-flat-button mat-button-base mat-accent"
-                routerLink="/kontakt">Skontaktuj się
-        </button>
-        <img src="assets/photos/sawmill/DSC03691.JPG" style="width: 100%; margin-top: 2rem;">
-      </div>
+  <div id="offer" fxLayout="column" fxLayout.lt-md="column">
+    <section class="section planks-background" fxLayout="column" fxLayoutAlign="center center">
+    </section>
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <section class="section section-big" fxLayout="column" fxFlex="50%" fxFlex.lt-lg="75%" fxFlex.lt-md="100%" fxLayoutAlign="center center">
+        <figure class="icon-header">
+          <img src="assets/icons/planks_nc.svg" alt="Deski" data-aos="zoom-in"
+               data-aos-anchor-placement="center-bottom">
+        </figure>
+        <app-section-header title="Asortyment" data-aos="fade-up">
+          Oferujemy szeroką gamę produktów i materiałów:
+        </app-section-header>
+        <div class="section-content">
+          <p data-aos="fade-left">Oferujemy szeroki asortyment naszych produktów takich jak tarcica obrzynana oraz
+            nieobrzynana, drewno
+            konstrukcyjne i opałowe. Na zamówienie przygotowujemy kompleksowe konstrukcje więźb dachowych z wysokiej
+            jakości drewna. Jesteśmy otwarci na Państwa potrzeby, nasz wykwalifikowany personel z chęcią udzieli Państwu
+            informacji w celu dostarczenia produktu spełniającego Państwa potrzeby.</p>
+          <button mat-flat-button color="accent" class="mat-flat-button mat-button-base mat-accent"
+                  routerLink="/kontakt" data-aos="zoom-in">Skontaktuj się
+          </button>
+        </div>
+      </section>
     </div>
-  </section>
-</div>
+  </div>
+</main>
