@@ -57,15 +57,20 @@
       height: 100%;
       flex-grow: 1;
       margin: 0;
-      background-image: url('../../assets/harvester_1024.jpg');
       background-size: cover;
       background-position: 50% 50%;
-      transform: scale(1);
-      transition: all 5s ease-in-out;
-
-      &:hover {
-        transform: scale(1.1);
-      }
     }
+  }
+}
+
+.webp {
+  .header-picture .header-picture-wrapper figure {
+    background-image: url('../../assets/harvester_1024.webp');
+  }
+}
+
+.no-webp {
+  .header-picture .header-picture-wrapper figure {
+    background-image: url('../../assets/harvester_1024.jpg');
   }
 }

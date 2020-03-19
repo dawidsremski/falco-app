@@ -12,18 +12,30 @@
 }
 
 #offer {
-  .planks-background {
-    background-color: mat-color($falco-app-primary);
-    background-image: url("../../assets/planks_1280.jpeg");
+  .bg {
     background-size: cover;
     background-position: 100% 100%;
   }
 
-  p {
-    text-align: justify;
-  }
+  .section-content {
+    p {
+      text-align: justify;
+    }
 
-  button {
-    margin-top: 1rem;
+    button {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.webp {
+  #offer .bg {
+    background-image: url("../../assets/planks_1280.webp");
+  }
+}
+
+.no-webp {
+  #offer .bg {
+    background-image: url("../../assets/planks_1280.jpeg");
   }
 }

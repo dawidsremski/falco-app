@@ -75,35 +75,13 @@ mat-card-title {
 }
 
 #ecology {
-  .forest {
-    background-color: mat-color($falco-app-primary);
-
-    &.bg {
-      background-image: url('../../../assets/forest_1280.jpeg');
-      background-size: cover;
-      background-position: 100% 100%;
-    }
-  }
-}
-
-.webp {
-  #quotation {
-    &.bg {
-      background-image: url("../../../assets/forest_2_bg_2560.webp");
-    }
-  }
-}
-
-.no-webp {
-  #quotation {
-    &.bg {
-      background-image: url("../../../assets/forest_2_bg_2560.jpeg");
-    }
+  .bg {
+    background-size: cover;
+    background-position: 100% 100%;
   }
 }
 
 #quotation {
-
   &.bg {
     background-size: cover;
     background-attachment: fixed;
@@ -144,4 +122,32 @@ mat-card-title {
 
 #map {
   height: 600px;
+}
+
+.webp {
+  #ecology {
+    .bg {
+      background-image: url('../../../assets/forest_1280.webp');
+    }
+  }
+
+  #quotation {
+    &.bg {
+      background-image: url("../../../assets/forest_2_bg_2560.webp");
+    }
+  }
+}
+
+.no-webp {
+  #ecology {
+    .bg {
+      background-image: url('../../../assets/forest_1280.jpeg');
+    }
+  }
+
+  #quotation {
+    &.bg {
+      background-image: url("../../../assets/forest_2_bg_2560.jpeg");
+    }
+  }
 }

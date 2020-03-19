@@ -173,6 +173,10 @@ h3 {
   background-color: #f8f8f8;
 }
 
+.primary-bg {
+    background-color: mat-color($falco-app-primary);
+}
+
 .mat-button, .mat-flat-button {
   border-radius: 0 !important;
   padding: .25rem 2rem !important;
