@@ -4,10 +4,10 @@
   flex-grow: 1;
 }
 
-.section {
-  min-height: auto;
+main {
+  flex-grow: 1;
 
-  .section-header {
-    margin: 0;
+  .section {
+    min-height: auto;
   }
 }

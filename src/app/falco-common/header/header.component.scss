@@ -1,7 +1,7 @@
 @import '../../../variables.scss';
 
-header {
-  top: -64px;
+.header {
+  margin-top: -64px;
   overflow: hidden;
   position: relative;
   background-size: cover;
@@ -27,4 +27,16 @@ header {
   overflow: hidden;
   background-color: rgba(48, 60, 56, 0.58);
   padding: 64px 2rem 1.5rem 2rem;
+}
+
+.webp {
+  .header {
+    background-image: url("../../../assets/forest_bg_2560.webp");
+  }
+}
+
+.no-webp {
+  .header {
+    background-image: url("../../../assets/forest_bg_2560.jpeg");
+  }
 }
